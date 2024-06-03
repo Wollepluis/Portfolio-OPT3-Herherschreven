@@ -1,219 +1,122 @@
-public class Main {
-
-    public static void main(String[] args) {
-        MenuManager menuManager = MenuManager.getInstance();
-
-        while (true) {
-            menuManager.getMenu(MenuType.MENU).toonMenu();
-        }
-    }
-}
-
-
-
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu {
-
-    private String titel;
-    private static boolean returned = false;
-    private final HashMap<Integer, Menukeuze> menukeuzes = new HashMap<>();
-
-    public String getTitel() {
-        return this.titel;
-    }
-
-    public void setTitel(String titel) {
-        this.titel = titel;
-    }
-
-    public static void setReturned(boolean returned) {
-        Menu.returned = returned;
-    }
-
-    public Menu(String titel) {
-        this.setTitel(titel);
-    }
-
-    private void checkIfReturned() {
-        if (!returned) {
-            MenuManager.getInstance().addHistory(this);
-        }
-        returned = false;
-    }
+    //Abstract class Actie extends vanuit Menukeuze
+    //toonMenukeuze --> voerUit methode in Menukeuze en @Override voor verschillende acties
+    //Menukeuze abstract
+    private ArrayList<Menukeuze> menukeuzes = new ArrayList<>();
 
     public void toonMenu() {
 
-        checkIfReturned();
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println();
-        System.out.printf("=== %s%n", getTitel());
-
-        for (Integer key : this.menukeuzes.keySet()) {
-            Menukeuze m = this.menukeuzes.get(key);
-            m.toonMenukeuze(key);
+        int counter = 0;
+        for (Menukeuze mk : menukeuzes) {
+            System.out.println("[" + counter + "] " + mk.naam);
+            counter++;
         }
 
-        System.out.println();
-        System.out.print("Keuze: ");
 
-        Menukeuze menukeuze = menukeuzes.get(MyScanner.nextInt());
+        int keuze = -1;
+        boolean keuzeGemaakt = false;
+        boolean firstLoop = true;
 
-        if (menukeuze != null) {
-            menukeuze.execute();
+        while (!keuzeGemaakt){
+            if (firstLoop){
+                System.out.print("Maak een keuze: ");
+            }
+
+            try{
+                keuze = new Scanner(System.in).nextInt();
+            }
+            catch (Exception e){
+
+            }
+
+
+            if (keuze > menukeuzes.size() - 1 ||
+                    keuze < 0){
+                System.out.print("Voer een geldig getal in: ");
+            }
+            else {
+                keuzeGemaakt = true;
+            }
+            firstLoop = false;
         }
-        else {
-            System.out.println("ERROR: Geen Actie gedefinieerd");
-        }
+        menukeuzes.get(keuze).toonMenukeuze();
     }
 
-    public void voegMenukeuzeToe(Menukeuze menukeuze) {
-        menukeuzes.put(menukeuzes.size() + 1, menukeuze);
+    public void voegKeuzeToe(Menukeuze menu){
+        menukeuzes.add(menu);
     }
 }
 
 
 
-import java.util.Set;
 
-public class Menukeuze {
+public class MainMenu extends Menukeuze {
 
-    private String titel;
-    private IActie action;
-    private boolean extraLegeRegel;
-
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public MainMenu(String naam) {
+        super(naam);
     }
-
-    public void setExtraLegeRegel(boolean extraLegeRegel) {
-        this.extraLegeRegel = extraLegeRegel;
-    }
-
-    public void setAction (IActie action) {
-        this.action = action;
-    }
-
-    public Menukeuze(String titel, boolean extraLegeRegel, IActie action) {
-        this.setTitel(titel);
-        this.setExtraLegeRegel(extraLegeRegel);
-        this.setAction(action);
-    }
-
-    public Menukeuze(String titel, IActie action) {
-        this.setTitel(titel);
-        this.setAction(action);
-    }
-
-    public void toonMenukeuze(int index) {
-
-        if (extraLegeRegel) {
-            System.out.println();
-        }
-        System.out.printf("%d. %s%n", index, this.titel);
-    }
-
-    public void execute() {
-
-        if (action != null) {
-            action.execute();
-        }
-        else {
-            System.out.println("Er is geen actie gedefinieerd voor deze keuze.");
-        }
-    }
-}
-
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-public class MenuManager {
-
-    public static final Map<MenuType, Menu> menus = new HashMap<>();
-    public final ArrayList<Menu> menuVolgorde = new ArrayList<>();
-
-    private static MenuManager instance = null;
-
-    public static MenuManager getInstance() {
-
-        if (instance == null) {
-            instance = new MenuManager();
-        }
-        return instance;
-    }
-
-    public MenuManager() {
-        initialize();
-    }
-
-    public void initialize() {
-        Menukeuze terug = new Menukeuze("Return", new Return());
-
-        Menu menu = new Menu("Menu");
-        menu.voegMenukeuzeToe(new Menukeuze("submenu", new Actie()));
-        MenuManager.menus.put(MenuType.MENU, menu);
-
-        Menu submenu = new Menu("subMenu");
-        submenu.voegMenukeuzeToe(new Menukeuze("subsubMenu", new Actie2()));
-        submenu.voegMenukeuzeToe(terug);
-        MenuManager.menus.put(MenuType.SUBMENU, submenu);
-
-        Menu subsubMenu = new Menu("subsubMenu");
-        subsubMenu.voegMenukeuzeToe(terug);
-        MenuManager.menus.put(MenuType.SUBSUBMENU, subsubMenu);
-    }
-
-    public void addHistory(Menu menu) {
-        menuVolgorde.add(menu);
-        for (Menu m : menuVolgorde) {
-            System.out.println(m.getTitel());
-        }
-    }
-
-    public void removeHistory() {
-        menuVolgorde.remove(menuVolgorde.size() - 1);
-        for (Menu m : menuVolgorde) {
-            System.out.println(m.getTitel());
-        }
-    }
-
-    public Menu getHistory() {
-        return menuVolgorde.get(menuVolgorde.size() - 1);
-    }
-
-    public Menu getMenu(MenuType menuType) {
-        return menus.get(menuType);
-    }
-}
-
-
-
-public enum MenuType {
-    MENU,
-    SUBMENU,
-    SUBSUBMENU
-}
-
-
-
-
-public interface IActie {
-
-    void execute();
-}
-
-
-
-
-public class Return implements IActie {
 
     @Override
-    public void execute() {
-        Menu.setReturned(true);
-        MenuManager.getInstance().removeHistory();
-        MenuManager.getInstance().getHistory().toonMenu();
+    public void toonMenukeuze(){
+        System.out.println("Dis is Mainmenu");
+        menu.toonMenu();
+    }
+}
+
+
+
+
+
+public class SubMenu extends Menukeuze {
+
+    public SubMenu(String naam) {
+        super(naam);
+    }
+
+    @Override
+    public void toonMenukeuze(){
+        System.out.println("Dit is SubMenu");
+        menu.toonMenu();
+    }
+}
+
+
+
+
+
+public class Menukeuze {
+    public String naam;
+    public Menu menu = new Menu();
+
+    public void toonMenukeuze() {
+        System.out.println(" ");
+        System.out.println("Je zit in menu: " + naam);
+        menu.toonMenu();
+    }
+
+    public Menukeuze(String naam){
+        this.naam = naam;
+    }
+}
+
+
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Menukeuze mainMenu = new MainMenu("Mainmenu");
+        Menukeuze submenu = new Menukeuze("Submenu");
+
+        mainMenu.menu.voegKeuzeToe(submenu);
+        submenu.menu.voegKeuzeToe(mainMenu);
+
+        mainMenu.toonMenukeuze();
     }
 }
