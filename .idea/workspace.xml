@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="UML-Geupdate en menuTest code.txt toegevoegd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="UML-Geupdate en menuTest code.txt toegevoegd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +19,12 @@
     &quot;assignee&quot;: &quot;Wollepluis&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Wollepluis/Portfolio-OPT3-Herherschreven.git&quot;,
-    &quot;accountId&quot;: &quot;74cded23-2d66-47e6-9d22-f88d9d225912&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Wollepluis/Portfolio-OPT3-Herherschreven.git",
+    "accountId": "f6a48e7f-0b36-45a1-9752-4d42e6c6ea57"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
