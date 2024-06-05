@@ -13,20 +13,11 @@ public class Menu {
         this.menuScherm = menuScherm;
     }
 
-    public boolean checkValideKeuze(int keuze) {
-
-        if (keuze > menukeuzes.size() - 1 || keuze < 0) {
-            System.out.print("ERROR | Keuze: ");
-            return false;
-        }
-        return true;
-    }
-
     public void toonMenukeuze() {
 
         int index = 0;
         for (Menukeuze m : menukeuzes) {
-            System.out.println("[" + index++ + "]" + m.naam);
+            System.out.println("[" + index++ + "]" + m.getNaam());
         }
     }
 
@@ -34,27 +25,18 @@ public class Menu {
 
         int keuze;
         boolean keuzeGemaakt = false;
-        boolean firstLoop = true;
 
         while (!keuzeGemaakt) {
 
             toonMenukeuze();
 
-            if (firstLoop) {
-                System.out.println();
-                System.out.println("Keuze: ");
-            }
-            keuze = MyScanner.nextInt();
+            System.out.println();
+            System.out.print("Keuze: ");
 
-            keuzeGemaakt = checkValideKeuze(keuze);
-            firstLoop = false;
+            keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
 
-            if (keuzeGemaakt) {
-                menukeuzes.get(keuze).execute();
-                menuScherm.printTitel();
-                keuzeGemaakt = false;
-                firstLoop = true;
-            }
+            menukeuzes.get(keuze).execute();
+            menuScherm.printTitel();
         }
     }
 

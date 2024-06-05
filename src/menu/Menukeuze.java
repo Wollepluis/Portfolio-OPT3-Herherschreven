@@ -2,7 +2,11 @@ package menu;
 
 public abstract class Menukeuze {
 
-    public String naam;
+    private final String naam;
+
+    public String getNaam() {
+        return naam;
+    }
 
     public Menukeuze(String naam) {
         this.naam = naam;

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="UML geupdate">
-      <change afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -46,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -88,13 +87,48 @@
       <option name="project" value="LOCAL" />
       <updated>1717595856961</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner">
+      <option name="closed" value="true" />
+      <created>1717606843291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717606843291</updated>
+    </task>
+    <task id="LOCAL-00005" summary="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner&#10;&#10;package 'acties' aangemaakt">
+      <option name="closed" value="true" />
+      <created>1717606884087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717606884087</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe.">
+      <option name="closed" value="true" />
+      <created>1717609656859</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717609656859</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe.">
+      <option name="closed" value="true" />
+      <created>1717609699690</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717609699690</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UML-Geupdate" />
     <MESSAGE value="UML-Geupdate en menuTest code.txt toegevoegd" />
     <MESSAGE value="UML geupdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="UML geupdate" />
+    <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner" />
+    <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner&#10;&#10;package 'acties' aangemaakt" />
+    <MESSAGE value="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
   </component>
 </project>

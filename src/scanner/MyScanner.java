@@ -1,5 +1,7 @@
 package scanner;
 
+import com.sun.jdi.Value;
+
 import java.util.Scanner;
 
 public class MyScanner {
@@ -34,5 +36,14 @@ public class MyScanner {
                 sc.next();
             }
         }
+    }
+
+    public static int nextInt(int minValue, int maxValue) {
+
+        int x = Integer.MIN_VALUE;
+        while (x < minValue || x > maxValue) {
+            x = nextInt();
+        }
+        return x;
     }
 }
