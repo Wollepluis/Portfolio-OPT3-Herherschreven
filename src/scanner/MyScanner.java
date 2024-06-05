@@ -1,7 +1,5 @@
 package scanner;
 
-import com.sun.jdi.Value;
-
 import java.util.Scanner;
 
 public class MyScanner {
