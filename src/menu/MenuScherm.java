@@ -9,6 +9,11 @@ public class MenuScherm extends Menukeuze {
     }
 
     @Override
+    public void printTitel() {
+        super.printTitel();
+    }
+
+    @Override
     public void execute() {
         printTitel();
         menu.toonMenu();

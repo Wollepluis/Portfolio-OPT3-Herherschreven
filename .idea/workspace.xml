@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe.">
+      <change afterPath="$PROJECT_DIR$/src/account/AdminAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/Beveiliging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/COAAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/MenuScherm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MenuScherm.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -27,12 +38,12 @@
     &quot;assignee&quot;: &quot;Wollepluis&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Wollepluis/Portfolio-OPT3-Herherschreven.git",
-    "accountId": "74cded23-2d66-47e6-9d22-f88d9d225912"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Wollepluis/Portfolio-OPT3-Herherschreven.git&quot;,
+    &quot;accountId&quot;: &quot;74cded23-2d66-47e6-9d22-f88d9d225912&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -42,18 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Portfolio-OPT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -119,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717609699690</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe.">
+      <option name="closed" value="true" />
+      <created>1717609748400</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717609748400</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

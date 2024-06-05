@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Menu {
 
     private final MenuScherm menuScherm;
-    private final ArrayList<Menukeuze> menukeuzes= new ArrayList<>();
+    private final ArrayList<Menukeuze> menukeuzes = new ArrayList<>();
 
     public Menu(MenuScherm menuScherm) {
         this.menuScherm = menuScherm;
