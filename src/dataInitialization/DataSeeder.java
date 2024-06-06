@@ -2,6 +2,7 @@ package dataInitialization;
 
 import account.Account;
 import account.AdminAccount;
+import account.COAAccount;
 import menu.MenuActie;
 import menu.MenuScherm;
 import menu.acties.Actie1;
@@ -39,11 +40,13 @@ public class DataSeeder {
     }
 
     private void initialize() {
-        AdminAccount adminAccount = new AdminAccount("Admin");
-        voegGebruikerToe(adminAccount);
         Account gebruikersAccount = new Account("Gebruiker");
-        voegGebruikerToe(gebruikersAccount);
+        COAAccount coaAccount = new COAAccount("coa");
+        AdminAccount adminAccount = new AdminAccount("Admin");
 
+        voegGebruikerToe(gebruikersAccount);
+        voegGebruikerToe(coaAccount);
+        voegGebruikerToe(adminAccount);
 
         MenuScherm mainMenu = new MenuScherm("Main-menu");
         MenuScherm subMenu = new MenuScherm("Sub-menu");
