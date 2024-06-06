@@ -20,7 +20,7 @@ public class Account {
     }
 
     public Account(String gebruikersnaam) {
-        this.setGebruikersnaam(gebruikersnaam);
+        setGebruikersnaam(gebruikersnaam);
     }
 
     public boolean checkGebruikersnaam(String gebruikersnaam) {

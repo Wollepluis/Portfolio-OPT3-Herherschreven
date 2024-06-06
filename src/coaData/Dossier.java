@@ -57,7 +57,11 @@ public class Dossier {
     }
 
     public Dossier() {
-
+        this.heeftPaspoortGetoond = false;
+        this.heeftAsielAanvraagCompleet = false;
+        this.rechterToegewezen = false;
+        setRechterUitspraak(RechterUitspraak.GEEN_BESLUIT);
+        setHeeftEigenWoning(EigenWoning.NEE);
     }
 
     public void stelDossierOp() {

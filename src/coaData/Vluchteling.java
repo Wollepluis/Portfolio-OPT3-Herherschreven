@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Vluchteling extends Persoon {
 
     private Land landVanHerkomst;
+    private Dossier dossier;
     private static final ArrayList<Vluchteling> alleVluchtelingen = new ArrayList<>();
 
     public Land getLandVanHerkomst() {
@@ -13,6 +14,14 @@ public class Vluchteling extends Persoon {
 
     public void setLandVanHerkomst(Land landVanHerkomst) {
         this.landVanHerkomst = landVanHerkomst;
+    }
+
+    public Dossier getDossier() {
+        return this.dossier;
+    }
+
+    public void setDossier(Dossier dossier) {
+        this.dossier = dossier;
     }
 
     public ArrayList<Vluchteling> getAlleVluchtelingen() {
@@ -25,6 +34,7 @@ public class Vluchteling extends Persoon {
 
     public Vluchteling(String naam, Land landVanHerkomst) {
         super(naam);
+        setDossier(new Dossier());
         setLandVanHerkomst(landVanHerkomst);
     }
 
