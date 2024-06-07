@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Menu {
     //Abstract class Actie extends vanuit Menukeuze
-    //toonMenukeuze --> voerUit methode in Menukeuze en @Override voor verschillende acties
+    //toonMenukeuze --> voerUit methode in Menukeuze en @Override voor verschillende menu.acties
     //Menukeuze abstract
     private ArrayList<Menukeuze> menukeuzes = new ArrayList<>();
 

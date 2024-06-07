@@ -1,12 +1,9 @@
 package dataInitialization;
 
-import account.Account;
-import account.AdminAccount;
-import account.COAAccount;
-import menu.MenuActie;
-import menu.MenuScherm;
-import menu.acties.Actie1;
-import menu.acties.Actie2;
+import account.*;
+import menu.*;
+import menu.acties.adminActies.*;
+
 
 import java.util.ArrayList;
 
@@ -48,18 +45,22 @@ public class DataSeeder {
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
-        MenuScherm mainMenu = new MenuScherm("Main-menu");
-        MenuScherm subMenu = new MenuScherm("Sub-menu");
-        MenuActie print = new Actie1("Print een line");
-        MenuActie print2 = new Actie2("Print een andere Line");
+        //Admin Menu initialization
+        MenuScherm mainMenu1 = new MenuScherm("Admin");
+        MenuScherm subMenu1 = new MenuScherm("Beheer Land");
+        MenuScherm subMenu2 = new MenuScherm("Gemeente Administratie");
 
+        mainMenu1.menu.voegKeuzeToe(subMenu1);
+        mainMenu1.menu.voegKeuzeToe(subMenu2);
+        subMenu1.menu.voegKeuzeToe(mainMenu1);
 
-        mainMenu.menu.voegKeuzeToe(subMenu);
-        subMenu.menu.voegKeuzeToe(mainMenu);
-        subMenu.menu.voegKeuzeToe(print);
-        subMenu.menu.voegKeuzeToe(print2);
+        MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land to aan de database");
+        MenuActie voegGemeenteToe = new ActieVoegGemeenteToe("Voeg een gemeente toe aan de database");
 
-        gebruikersAccount.setMenu(mainMenu);
+        subMenu1.menu.voegKeuzeToe(voegLandToe);
+        subMenu2.menu.voegKeuzeToe(voegGemeenteToe);
+
+        //gebruikersAccount.setMenu(mainMenu);
     }
 
     private DataSeeder() {

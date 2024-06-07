@@ -12,6 +12,8 @@ public class Gemeente {
     private int aantalInwoners;
     private final ArrayList<AZC> localeAZCs = new ArrayList<>();
 
+    private static final ArrayList<Gemeente> alleGemeentes = new ArrayList<>();
+
     public String getNaam() {
         return this.naam;
     }
@@ -26,6 +28,10 @@ public class Gemeente {
 
     public void setAantalInwoners(int aantalInwoners) {
         this.aantalInwoners = aantalInwoners;
+    }
+
+    public static ArrayList<Gemeente> getAlleGemeentes() {
+        return alleGemeentes;
     }
 
     public void voegAZCToe(AZC azc) {

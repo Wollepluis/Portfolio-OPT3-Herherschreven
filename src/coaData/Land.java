@@ -1,8 +1,11 @@
 package coaData;
 
+import java.util.ArrayList;
+
 public class Land {
     private String naam;
     private boolean isVeilig;
+    private static final ArrayList<Land> alleLanden = new ArrayList<>();
 
     public String getNaam() {
         return this.naam;
@@ -22,6 +25,10 @@ public class Land {
 
     public void switchIsVeilig() {
         this.isVeilig = !isVeilig;
+    }
+
+    public static ArrayList<Land> getAlleLanden() {
+        return alleLanden;
     }
 
     public Land(String naam, boolean isVeilig) {
