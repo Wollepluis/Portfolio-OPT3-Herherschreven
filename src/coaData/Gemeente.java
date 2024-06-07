@@ -1,5 +1,9 @@
 package coaData;
 
+import events.EventArgs;
+import events.IEventListener;
+import events.VluchtelingEventArgs;
+
 import java.util.ArrayList;
 
 public class Gemeente {
@@ -26,6 +30,13 @@ public class Gemeente {
 
     public void voegAZCToe(AZC azc) {
         localeAZCs.add(azc);
+
+        azc.vluchtelingAdded.subscribe((sender, args) -> {
+
+            if (args instanceof VluchtelingEventArgs vluchtelingEventArgs) {
+                System.out.println("Vluchteling toegevoegd: " + vluchtelingEventArgs.getVluchteling());
+            }
+        });
     }
 
     public void verwijderAZC(Adres adres) {

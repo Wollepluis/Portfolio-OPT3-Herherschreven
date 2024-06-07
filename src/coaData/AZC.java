@@ -1,12 +1,15 @@
 package coaData;
 
+import events.EventHandler;
+import events.VluchtelingEventArgs;
+
 import java.util.ArrayList;
 
 public class AZC extends Verblijfplaats {
 
     private int aantalPlaatsen;
     private final ArrayList<Vluchteling> gevestigdeVluchtelingen = new ArrayList<>();
-
+    public EventHandler vluchtelingAdded = new EventHandler();
 
     public int getAantalPlaatsen() {
         return this.aantalPlaatsen;
@@ -22,6 +25,7 @@ public class AZC extends Verblijfplaats {
 
     public void addVluchteling(Vluchteling vluchteling) {
         this.gevestigdeVluchtelingen.add(vluchteling);
+        vluchtelingAdded.invoke(this, new VluchtelingEventArgs(vluchteling));
     }
 
     public int getBeschikbarePlaatsen() {
