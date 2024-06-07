@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Alle classes in package coaData aangemaakt">
-      <change afterPath="$PROJECT_DIR$/src/coaData/COAMedewerker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Account.java" afterDir="false" />
-    </list>
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Alle classes in package coaData aangemaakt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717710351921</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Alle classes in package coaData aangemaakt">
+      <option name="closed" value="true" />
+      <created>1717711243535</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717711243535</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
