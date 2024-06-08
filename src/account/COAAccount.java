@@ -7,5 +7,6 @@ public class COAAccount extends Account {
 
     @Override
     public void startMenu() {
+        super.startMenu();
     }
 }

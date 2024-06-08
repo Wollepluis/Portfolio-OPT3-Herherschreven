@@ -38,7 +38,9 @@ public class Beveiliging {
 
         boolean loggedIn = false;
 
-        System.out.println("Gebruikersnaam: ");
+        System.out.println();
+        System.out.println("=== Login");
+        System.out.print("Gebruikersnaam: ");
 
         while (!loggedIn) {
             String gebruikersnaam = MyScanner.nextLine();

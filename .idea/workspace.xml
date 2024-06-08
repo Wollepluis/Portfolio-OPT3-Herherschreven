@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/Testactie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegGemeenteToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegLandToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scanner/ClosedQuestion.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land">
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/ActieStopProgramma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/menuTest code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/menuTest code.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Land.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/AdminAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/AdminAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/COAAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/COAAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/Actie1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/Actie2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/Testactie.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +64,20 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Portfolio-OPT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -197,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717768535038</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land">
+      <option name="closed" value="true" />
+      <created>1717773133540</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717773133540</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -213,6 +231,7 @@
     <MESSAGE value="package events en classes erin aangemaakt" />
     <MESSAGE value="EventHandler Classes geimplementeerd" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land" />
   </component>
 </project>

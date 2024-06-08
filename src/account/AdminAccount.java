@@ -8,6 +8,6 @@ public class AdminAccount extends COAAccount {
 
     @Override
     public void startMenu() {
-
+        super.startMenu();
     }
 }

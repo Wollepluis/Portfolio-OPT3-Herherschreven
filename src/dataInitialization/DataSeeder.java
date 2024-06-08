@@ -2,6 +2,7 @@ package dataInitialization;
 
 import account.*;
 import menu.*;
+import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
 
 
@@ -46,21 +47,24 @@ public class DataSeeder {
         voegGebruikerToe(adminAccount);
 
         //Admin Menu initialization
-        MenuScherm mainMenu1 = new MenuScherm("Admin");
+        MenuScherm mainMenu1 = new MenuScherm("Main menu");
         MenuScherm subMenu1 = new MenuScherm("Beheer Land");
         MenuScherm subMenu2 = new MenuScherm("Gemeente Administratie");
 
-        mainMenu1.menu.voegKeuzeToe(subMenu1);
-        mainMenu1.menu.voegKeuzeToe(subMenu2);
-        subMenu1.menu.voegKeuzeToe(mainMenu1);
-
         MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land to aan de database");
         MenuActie voegGemeenteToe = new ActieVoegGemeenteToe("Voeg een gemeente toe aan de database");
+        MenuActie logout = new ActieLogout("Logout");
+
+        mainMenu1.menu.voegKeuzeToe(subMenu1);
+        mainMenu1.menu.voegKeuzeToe(subMenu2);
+        mainMenu1.menu.voegKeuzeToe(logout);
+        subMenu1.menu.voegKeuzeToe(mainMenu1);
+        subMenu2.menu.voegKeuzeToe(mainMenu1);
 
         subMenu1.menu.voegKeuzeToe(voegLandToe);
         subMenu2.menu.voegKeuzeToe(voegGemeenteToe);
 
-        //gebruikersAccount.setMenu(mainMenu);
+        adminAccount.setMenu(mainMenu1);
     }
 
     private DataSeeder() {
