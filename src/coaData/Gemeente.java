@@ -11,8 +11,8 @@ public class Gemeente {
     private String naam;
     private int aantalInwoners;
     private final ArrayList<AZC> localeAZCs = new ArrayList<>();
-
     private static final ArrayList<Gemeente> alleGemeentes = new ArrayList<>();
+    public static Gemeente actiefGemeente;
 
     public String getNaam() {
         return this.naam;
@@ -32,6 +32,21 @@ public class Gemeente {
 
     public static ArrayList<Gemeente> getAlleGemeentes() {
         return alleGemeentes;
+    }
+
+    public static Gemeente getGemeente(String gemeentenaam) {
+
+        for (Gemeente g : alleGemeentes) {
+
+            if (gemeentenaam.equalsIgnoreCase(g.getNaam())) {
+                return g;
+            }
+        }
+        return null;
+    }
+
+    public static void setActiefGemeente(Gemeente gemeente) {
+        actiefGemeente = gemeente;
     }
 
     public void voegAZCToe(AZC azc) {

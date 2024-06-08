@@ -1,5 +1,9 @@
 package menu;
 
+import coaData.Gemeente;
+import coaData.Land;
+import coaData.Vluchteling;
+import enums.PreMenuType;
 import scanner.MyScanner;
 
 import java.util.ArrayList;
@@ -18,6 +22,24 @@ public class Menu {
         int index = 0;
         for (Menukeuze m : menukeuzes) {
             System.out.println("[" + index++ + "]" + m.getNaam());
+        }
+    }
+
+    public void toonPreMenu(PreMenuType preMenuType) {
+
+        switch (preMenuType) {
+            case LAND:
+                MyScanner.nextLand();
+                break;
+            case GEMEENTE:
+                MyScanner.nextGemeente();
+                break;
+            case NAAM:
+                MyScanner.NextVluchteling();
+                break;
+            case ADRES:
+                MyScanner.nextAdres();
+                break;
         }
     }
 

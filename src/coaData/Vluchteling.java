@@ -7,6 +7,7 @@ public class Vluchteling extends Persoon {
     private Land landVanHerkomst;
     private Dossier dossier;
     private static final ArrayList<Vluchteling> alleVluchtelingen = new ArrayList<>();
+    private static Vluchteling actiefVluchteling;
 
     public Land getLandVanHerkomst() {
         return this.landVanHerkomst;
@@ -30,6 +31,21 @@ public class Vluchteling extends Persoon {
 
     public void addVluchteling(Vluchteling vluchteling) {
         alleVluchtelingen.add(vluchteling);
+    }
+
+    public static Vluchteling getVluchteling(String vluchtelingNaam) {
+
+        for (Vluchteling v : alleVluchtelingen) {
+
+            if (vluchtelingNaam.equalsIgnoreCase(v.getNaam())) {
+                return v;
+            }
+        }
+        return null;
+    }
+
+    public static void setActiefVluchteling(String vluchtelingNaam) {
+        actiefVluchteling = getVluchteling(vluchtelingNaam);
     }
 
     public Vluchteling(String naam, Land landVanHerkomst) {

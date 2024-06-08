@@ -1,7 +1,7 @@
 package coaData;
 
-import Enums.EigenWoning;
-import Enums.RechterUitspraak;
+import enums.EigenWoning;
+import enums.RechterUitspraak;
 
 public class Dossier {
 

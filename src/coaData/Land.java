@@ -6,6 +6,7 @@ public class Land {
     private String naam;
     private boolean isVeilig;
     private static final ArrayList<Land> alleLanden = new ArrayList<>();
+    public static Land actiefLand;
 
     public String getNaam() {
         return this.naam;
@@ -29,6 +30,21 @@ public class Land {
 
     public static ArrayList<Land> getAlleLanden() {
         return alleLanden;
+    }
+
+    public static Land getLand(String landnaam) {
+
+        for (Land l : alleLanden) {
+
+            if (landnaam.equalsIgnoreCase(l.getNaam())) {
+                return l;
+            }
+        }
+        return null;
+    }
+
+    public static void setActiefLand(Land land) {
+        actiefLand = land;
     }
 
     public Land(String naam, boolean isVeilig) {
