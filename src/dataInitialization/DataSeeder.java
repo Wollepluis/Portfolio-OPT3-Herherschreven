@@ -1,6 +1,7 @@
 package dataInitialization;
 
 import account.*;
+import coaData.Land;
 import menu.*;
 import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
@@ -47,13 +48,16 @@ public class DataSeeder {
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
+        Land land = new Land("Ghana", false);
+        Land.alleLanden.add(land);
+
         //Admin Menu initialization
         MenuScherm mainMenu1 = new MenuScherm("Main menu");
         MenuScherm subMenu1 = new MenuScherm("Beheer Land");
         MenuScherm subMenu2 = new MenuScherm("Gemeente Administratie");
         MenuScherm subMenu3 = new MenuScherm("Wijzig Land", PreMenuType.LAND);
 
-        MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land to aan de database");
+        MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land toe aan de database");
         MenuActie voegGemeenteToe = new ActieVoegGemeenteToe("Voeg een gemeente toe aan de database");
         MenuActie logout = new ActieLogout("Logout");
         MenuActie verwijderLand = new ActieVerwijderLand("Verwijder dit land van de database");
@@ -74,6 +78,7 @@ public class DataSeeder {
         subMenu3.menu.voegKeuzeToe(wijzigLandNaam);
         subMenu3.menu.voegKeuzeToe(wijzigVeiligheid);
         subMenu3.menu.voegKeuzeToe(verwijderLand);
+        subMenu3.menu.voegKeuzeToe(subMenu1);
 
         adminAccount.setMenu(mainMenu1);
     }

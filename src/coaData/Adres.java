@@ -9,7 +9,7 @@ public class Adres {
     private String straatnaam;
     private int huisnummer;
 
-    private static final ArrayList<Adres> alleAdressen = new ArrayList<>();
+    public static final ArrayList<Adres> alleAdressen = new ArrayList<>();
     public static Adres actiefAdres;
 
     public Gemeente getGemeente() {
@@ -57,6 +57,8 @@ public class Adres {
     public static void setActiefAdres(Adres adres) {
         actiefAdres = adres;
     }
+
+    public static void vraagNaarAdres() {}
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {
         setGemeente(gemeente);
         setPostcode(postcode);

@@ -6,8 +6,8 @@ public class Vluchteling extends Persoon {
 
     private Land landVanHerkomst;
     private Dossier dossier;
-    private static final ArrayList<Vluchteling> alleVluchtelingen = new ArrayList<>();
-    private static Vluchteling actiefVluchteling;
+    public static final ArrayList<Vluchteling> alleVluchtelingen = new ArrayList<>();
+    public static Vluchteling actiefVluchteling;
 
     public Land getLandVanHerkomst() {
         return this.landVanHerkomst;
@@ -48,6 +48,7 @@ public class Vluchteling extends Persoon {
         actiefVluchteling = getVluchteling(vluchtelingNaam);
     }
 
+    public static void vraagNaarVluchteling() {}
     public Vluchteling(String naam, Land landVanHerkomst) {
         super(naam);
         setDossier(new Dossier());
