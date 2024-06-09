@@ -1,5 +1,7 @@
 package coaData;
 
+import scanner.MyScanner;
+
 import java.util.ArrayList;
 
 public class Adres {
@@ -58,7 +60,18 @@ public class Adres {
         actiefAdres = adres;
     }
 
-    public static void vraagNaarAdres() {}
+    public static void vraagNaarAdres() {
+
+        System.out.print("Postcode: ");
+        String postcode = MyScanner.nextLine();
+        System.out.print("Straatnaam: ");
+        String straatnaam = MyScanner.nextLine();
+        System.out.print("Huisnummer: ");
+        int huisnummer = MyScanner.nextInt();
+
+        Adres adres = getAdres(postcode, straatnaam, huisnummer);
+        setActiefAdres(adres);
+    }
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {
         setGemeente(gemeente);
         setPostcode(postcode);

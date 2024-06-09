@@ -1,5 +1,7 @@
 package coaData;
 
+import scanner.MyScanner;
+
 import java.util.ArrayList;
 
 public class Vluchteling extends Persoon {
@@ -44,11 +46,15 @@ public class Vluchteling extends Persoon {
         return null;
     }
 
-    public static void setActiefVluchteling(String vluchtelingNaam) {
-        actiefVluchteling = getVluchteling(vluchtelingNaam);
+    public static void setActiefVluchteling(Vluchteling vluchteling) {
+        actiefVluchteling = vluchteling;
     }
 
-    public static void vraagNaarVluchteling() {}
+    public static void vraagNaarVluchteling() {
+        System.out.print("Geef naam op: ");
+        Vluchteling vluchteling = getVluchteling(MyScanner.nextLine());
+        setActiefVluchteling(vluchteling);
+    }
     public Vluchteling(String naam, Land landVanHerkomst) {
         super(naam);
         setDossier(new Dossier());

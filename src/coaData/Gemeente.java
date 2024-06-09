@@ -3,6 +3,7 @@ package coaData;
 import events.EventArgs;
 import events.IEventListener;
 import events.VluchtelingEventArgs;
+import scanner.MyScanner;
 
 import java.util.ArrayList;
 
@@ -41,11 +42,19 @@ public class Gemeente {
         return null;
     }
 
+    public ArrayList<AZC> getLocaleAZCs() {
+        return localeAZCs;
+    }
+
     public static void setActiefGemeente(Gemeente gemeente) {
         actiefGemeente = gemeente;
     }
 
-    public static void vraagNaarGemeente() {}
+    public static void vraagNaarGemeente() {
+        System.out.print("Welke gemeente?: ");
+        Gemeente gemeente = getGemeente(MyScanner.nextLine());
+        setActiefGemeente(gemeente);
+    }
 
     public void voegAZCToe(AZC azc) {
         localeAZCs.add(azc);

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Enum PreMenuType toegevoegd&#10;&#10;Menus geupdate en acties toegevoegd&#10;&#10;actiefstatus in land, gemeente, vluchteling en Adres toegevoegd">
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderLand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigLandNaam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigVeiligheid.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast">
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieBeschikbarePlaatsenOpvragen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieRapportageOpvragen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAZCAdres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigGemeenteNaam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/Adres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Adres.java" afterDir="false" />
@@ -15,11 +19,6 @@
       <change beforePath="$PROJECT_DIR$/src/coaData/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Land.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/Vluchteling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Vluchteling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/MenuScherm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MenuScherm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menukeuze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menukeuze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegLandToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegLandToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scanner/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scanner/MyScanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717884740444</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast">
+      <option name="closed" value="true" />
+      <created>1717936811712</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717936811712</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast">
+      <option name="closed" value="true" />
+      <created>1717936887846</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717936887846</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -258,6 +273,7 @@
     <MESSAGE value="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land" />
     <MESSAGE value="ActieLogout toegevoegd" />
     <MESSAGE value="Enum PreMenuType toegevoegd&#10;&#10;Menus geupdate en acties toegevoegd&#10;&#10;actiefstatus in land, gemeente, vluchteling en Adres toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enum PreMenuType toegevoegd&#10;&#10;Menus geupdate en acties toegevoegd&#10;&#10;actiefstatus in land, gemeente, vluchteling en Adres toegevoegd" />
+    <MESSAGE value="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast" />
+    <option name="LAST_COMMIT_MESSAGE" value="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast" />
   </component>
 </project>

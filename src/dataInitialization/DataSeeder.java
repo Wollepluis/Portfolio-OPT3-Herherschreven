@@ -1,7 +1,7 @@
 package dataInitialization;
 
 import account.*;
-import coaData.Land;
+import coaData.*;
 import menu.*;
 import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
@@ -40,22 +40,47 @@ public class DataSeeder {
     }
 
     private void initialize() {
+        //Gebruiker initialization
         Account gebruikersAccount = new Account("Gebruiker");
         COAAccount coaAccount = new COAAccount("coa");
         AdminAccount adminAccount = new AdminAccount("Admin");
-
         voegGebruikerToe(gebruikersAccount);
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
-        Land land = new Land("Ghana", false);
-        Land.alleLanden.add(land);
+        //Land initialization
+        Land ghana = new Land("Ghana", false);
+        Land afghanistan = new Land("Afghanistan", true);
+        Land.alleLanden.add(ghana);
+        Land.alleLanden.add(afghanistan);
+
+        //Gemeente initialization
+        Gemeente denHaag = new Gemeente("Den Haag", 562000);
+        Gemeente amsterdam = new Gemeente("Amsterdam", 918000);
+        Gemeente rotterdam = new Gemeente("Rotterdam", 663000);
+        Gemeente.alleGemeentes.add(denHaag);
+        Gemeente.alleGemeentes.add(amsterdam);
+        Gemeente.alleGemeentes.add(rotterdam);
+
+        //Adres initialization
+        Adres adres1 = new Adres(amsterdam, "1067SL", "Willinklaan", 3);
+        Adres adres2 = new Adres(denHaag, "2517AS", "Laan van Meerdervoort",108);
+        Adres.alleAdressen.add(adres1);
+        Adres.alleAdressen.add(adres2);
+
+        //AZC initialization
+        AZC azc1 = new AZC(adres1, 700);
+        AZC azc2 = new AZC(adres2, 600);
+        amsterdam.getLocaleAZCs().add(azc1);
+        denHaag.getLocaleAZCs().add(azc2);
 
         //Admin Menu initialization
         MenuScherm mainMenu1 = new MenuScherm("Main menu");
         MenuScherm subMenu1 = new MenuScherm("Beheer Land");
         MenuScherm subMenu2 = new MenuScherm("Gemeente Administratie");
         MenuScherm subMenu3 = new MenuScherm("Wijzig Land", PreMenuType.LAND);
+        MenuScherm subMenu4 = new MenuScherm("Wijzig Gemeente", PreMenuType.GEMEENTE);
+        MenuScherm subMenu5 = new MenuScherm("Beheer AZCs", PreMenuType.ADRES);
 
         MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land toe aan de database");
         MenuActie voegGemeenteToe = new ActieVoegGemeenteToe("Voeg een gemeente toe aan de database");
@@ -63,6 +88,13 @@ public class DataSeeder {
         MenuActie verwijderLand = new ActieVerwijderLand("Verwijder dit land van de database");
         MenuActie wijzigVeiligheid = new ActieWijzigVeiligheid("Update veiligheidsstatus");
         MenuActie wijzigLandNaam = new ActieWijzigLandNaam("Wijzig naam");
+        MenuActie voegAZCToe = new ActieVoegAZCToe("Voeg nieuw AZC Toe");
+        MenuActie wijzigGemeenteNaam = new ActieWijzigGemeenteNaam("Wijzig naam van Gemeente");
+        MenuActie wijzigAantalInwoners = new ActieWijzigAantalInwoners("Wijzig aantal inwoners");
+        MenuActie rapportageOpvragen = new ActieRapportageOpvragen("Rapportage opvragen");
+        MenuActie beschikbarePlaatsenOpvragen = new ActieBeschikbarePlaatsenOpvragen("Beschikbare Plaatsen Opvragen");
+        MenuActie wijzigAZCAdres = new ActieWijzigAZCAdres("Wijzig Adres");
+        MenuActie verwijderAZCAdres = new ActieVerwijderAZC("Verwijder AZC");
 
         mainMenu1.menu.voegKeuzeToe(subMenu1);
         mainMenu1.menu.voegKeuzeToe(subMenu2);
@@ -73,12 +105,25 @@ public class DataSeeder {
         subMenu1.menu.voegKeuzeToe(mainMenu1);
 
         subMenu2.menu.voegKeuzeToe(voegGemeenteToe);
+        subMenu2.menu.voegKeuzeToe(subMenu4);
         subMenu2.menu.voegKeuzeToe(mainMenu1);
 
         subMenu3.menu.voegKeuzeToe(wijzigLandNaam);
         subMenu3.menu.voegKeuzeToe(wijzigVeiligheid);
         subMenu3.menu.voegKeuzeToe(verwijderLand);
         subMenu3.menu.voegKeuzeToe(subMenu1);
+
+        subMenu4.menu.voegKeuzeToe(wijzigGemeenteNaam);
+        subMenu4.menu.voegKeuzeToe(wijzigAantalInwoners);
+        subMenu4.menu.voegKeuzeToe(voegAZCToe);
+        subMenu4.menu.voegKeuzeToe(subMenu5);
+        subMenu4.menu.voegKeuzeToe(rapportageOpvragen);
+        subMenu4.menu.voegKeuzeToe(beschikbarePlaatsenOpvragen);
+        subMenu4.menu.voegKeuzeToe(subMenu2);
+
+        subMenu5.menu.voegKeuzeToe(wijzigAZCAdres);
+        subMenu5.menu.voegKeuzeToe(verwijderAZCAdres);
+        subMenu5.menu.voegKeuzeToe(subMenu4);
 
         adminAccount.setMenu(mainMenu1);
     }

@@ -45,10 +45,6 @@ public class Land {
         actiefLand = land;
     }
 
-    public static void resetActiefLand() {
-        actiefLand = null;
-    }
-
     public static void vraagNaarLand() {
         System.out.print("Welk land?: ");
         Land land = getLand(MyScanner.nextLine());
