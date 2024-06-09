@@ -1,11 +1,13 @@
 package coaData;
 
+import scanner.MyScanner;
+
 import java.util.ArrayList;
 
 public class Land {
     private String naam;
     private boolean isVeilig;
-    private static final ArrayList<Land> alleLanden = new ArrayList<>();
+    public static final ArrayList<Land> alleLanden = new ArrayList<>();
     public static Land actiefLand;
 
     public String getNaam() {
@@ -28,10 +30,6 @@ public class Land {
         this.isVeilig = !isVeilig;
     }
 
-    public static ArrayList<Land> getAlleLanden() {
-        return alleLanden;
-    }
-
     public static Land getLand(String landnaam) {
 
         for (Land l : alleLanden) {
@@ -45,6 +43,16 @@ public class Land {
 
     public static void setActiefLand(Land land) {
         actiefLand = land;
+    }
+
+    public static void resetActiefLand() {
+        actiefLand = null;
+    }
+
+    public static void vraagNaarLand() {
+        System.out.print("Welk land?: ");
+        Land land = getLand(MyScanner.nextLine());
+        setActiefLand(land);
     }
 
     public Land(String naam, boolean isVeilig) {

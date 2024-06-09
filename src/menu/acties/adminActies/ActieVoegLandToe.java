@@ -19,7 +19,7 @@ public class ActieVoegLandToe extends MenuActie {
         String landNaam = MyScanner.nextLine();
         boolean isVeilig = ClosedQuestion.question("Is het land veilig?");
 
-        Land.getAlleLanden().add(new Land(landNaam, isVeilig));
+        Land.alleLanden.add(new Land(landNaam, isVeilig));
         System.out.println("Land toegevoegd.");
     }
 }

@@ -2,6 +2,7 @@ package menu;
 
 import coaData.Gemeente;
 import coaData.Land;
+import coaData.Adres;
 import coaData.Vluchteling;
 import enums.PreMenuType;
 import scanner.MyScanner;
@@ -29,16 +30,16 @@ public class Menu {
 
         switch (preMenuType) {
             case LAND:
-                MyScanner.nextLand();
+                Land.vraagNaarLand();
                 break;
             case GEMEENTE:
-                MyScanner.nextGemeente();
+                Gemeente.vraagNaarGemeente();
                 break;
             case NAAM:
-                MyScanner.NextVluchteling();
+                Vluchteling.vraagNaarVluchteling();
                 break;
             case ADRES:
-                MyScanner.nextAdres();
+                Adres.vraagNaarAdres();
                 break;
         }
     }

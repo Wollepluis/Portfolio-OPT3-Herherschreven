@@ -1,5 +1,7 @@
 package menu;
 
+import enums.PreMenuType;
+
 public abstract class Menukeuze {
 
     private final String naam;
@@ -13,7 +15,7 @@ public abstract class Menukeuze {
     }
 
     public void printTitel() {
-        System.out.println("=== " + naam);
+        System.out.print("=== " + naam);
     }
 
     public void execute() {

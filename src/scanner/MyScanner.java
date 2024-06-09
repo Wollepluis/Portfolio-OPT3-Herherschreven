@@ -1,5 +1,7 @@
 package scanner;
 
+import coaData.Vluchteling;
+
 import java.util.Scanner;
 
 public class MyScanner {

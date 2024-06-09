@@ -17,7 +17,7 @@ public class ActieVoegGemeenteToe extends MenuActie {
         System.out.println("Geeft het aantal inwoners in deze gemeente op: ");
         int aantalInwoners= MyScanner.nextInt();
 
-        Gemeente.getAlleGemeentes().add(new Gemeente(gemeenteNaam, aantalInwoners));
+        Gemeente.alleGemeentes.add(new Gemeente(gemeenteNaam, aantalInwoners));
         System.out.println("Gemeente toegevoegd.");
     }
 }
