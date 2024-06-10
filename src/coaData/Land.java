@@ -45,10 +45,16 @@ public class Land {
         actiefLand = land;
     }
 
-    public static void vraagNaarLand() {
-        System.out.print("Welk land?: ");
-        Land land = getLand(MyScanner.nextLine());
-        setActiefLand(land);
+    public static Land vraagNaarLand() {
+        while (true) {
+            System.out.print("Land: ");
+            Land land = getLand(MyScanner.nextLine());
+
+            if (land != null) {
+                return land;
+            }
+            System.out.println("Dit land staat niet in het systeem.");
+        }
     }
 
     public Land(String naam, boolean isVeilig) {

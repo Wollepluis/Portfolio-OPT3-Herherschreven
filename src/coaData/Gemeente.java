@@ -50,10 +50,16 @@ public class Gemeente {
         actiefGemeente = gemeente;
     }
 
-    public static void vraagNaarGemeente() {
-        System.out.print("Welke gemeente?: ");
-        Gemeente gemeente = getGemeente(MyScanner.nextLine());
-        setActiefGemeente(gemeente);
+    public static Gemeente vraagNaarGemeente() {
+        while (true) {
+            System.out.print("Gemeente: ");
+            Gemeente gemeente = getGemeente(MyScanner.nextLine());
+
+            if (gemeente != null) {
+                return gemeente;
+            }
+            System.out.println("Deze gemeente staat niet in het systeem.");
+        }
     }
 
     public void voegAZCToe(AZC azc) {

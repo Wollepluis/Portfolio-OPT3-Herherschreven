@@ -60,18 +60,32 @@ public class Adres {
         actiefAdres = adres;
     }
 
-    public static void vraagNaarAdres() {
-
+    public static String vraagPostcode() {
         System.out.print("Postcode: ");
-        String postcode = MyScanner.nextLine();
-        System.out.print("Straatnaam: ");
-        String straatnaam = MyScanner.nextLine();
-        System.out.print("Huisnummer: ");
-        int huisnummer = MyScanner.nextInt();
-
-        Adres adres = getAdres(postcode, straatnaam, huisnummer);
-        setActiefAdres(adres);
+        return MyScanner.nextLine();
     }
+
+    public static String vraagStraatnaam() {
+        System.out.print("Straatnaam: ");
+        return MyScanner.nextLine();
+    }
+    public static int vraagHuisnummer() {
+        System.out.print("Huisnummer: ");
+        return MyScanner.nextInt();
+    }
+
+    public static Adres vraagNaarAdres() {
+        while (true) {
+            System.out.println("Geef adres op.");
+            Adres adres = getAdres(vraagPostcode(), vraagStraatnaam(), vraagHuisnummer());
+
+            if (adres != null) {
+                return adres;
+            }
+            System.out.println("Dit adres staat niet in het systeem.");
+        }
+    }
+
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {
         setGemeente(gemeente);
         setPostcode(postcode);

@@ -30,16 +30,16 @@ public class Menu {
 
         switch (preMenuType) {
             case LAND:
-                Land.vraagNaarLand();
+                Land.setActiefLand(Land.vraagNaarLand());
                 break;
             case GEMEENTE:
-                Gemeente.vraagNaarGemeente();
+                Gemeente.setActiefGemeente(Gemeente.vraagNaarGemeente());
                 break;
             case NAAM:
-                Vluchteling.vraagNaarVluchteling();
+                Vluchteling.setActiefVluchteling(Vluchteling.vraagNaarVluchteling());
                 break;
             case ADRES:
-                Adres.vraagNaarAdres();
+                Adres.setActiefAdres(Adres.vraagNaarAdres());
                 break;
         }
     }

@@ -50,10 +50,16 @@ public class Vluchteling extends Persoon {
         actiefVluchteling = vluchteling;
     }
 
-    public static void vraagNaarVluchteling() {
-        System.out.print("Geef naam op: ");
-        Vluchteling vluchteling = getVluchteling(MyScanner.nextLine());
-        setActiefVluchteling(vluchteling);
+    public static Vluchteling vraagNaarVluchteling() {
+        while (true) {
+            System.out.print("Naam: ");
+            Vluchteling vluchteling = getVluchteling(MyScanner.nextLine());
+
+            if (vluchteling != null) {
+                return vluchteling;
+            }
+            System.out.println("Deze vluchteling staat niet in het systeem.");
+        }
     }
     public Vluchteling(String naam, Land landVanHerkomst) {
         super(naam);

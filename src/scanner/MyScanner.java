@@ -1,7 +1,5 @@
 package scanner;
 
-import coaData.Vluchteling;
-
 import java.util.Scanner;
 
 public class MyScanner {
@@ -42,6 +40,15 @@ public class MyScanner {
 
         int x = Integer.MIN_VALUE;
         while (x < minValue || x > maxValue) {
+            x = nextInt();
+        }
+        return x;
+    }
+
+    public static int nextInt(int mustBeHigherThan) {
+
+        int x = mustBeHigherThan;
+        while (x <= mustBeHigherThan) {
             x = nextInt();
         }
         return x;
