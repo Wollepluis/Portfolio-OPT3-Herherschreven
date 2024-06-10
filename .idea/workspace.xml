@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Update">
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Adres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Adres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Gemeente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Gemeente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Land.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Vluchteling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Vluchteling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigGemeenteNaam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigGemeenteNaam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717974167707</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd">
+      <option name="closed" value="true" />
+      <created>1718043786442</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718043786442</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +301,7 @@
     <MESSAGE value="ActieVerwijderLand, ActieWijzigLandNaam, ActieWijzigVeiligheid toegevoegd&#10;&#10;Menu aangepast" />
     <MESSAGE value="Initializaties toegevoegd&#10;&#10;Acties toegevoegd" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd" />
+    <option name="LAST_COMMIT_MESSAGE" value="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd" />
   </component>
 </project>
