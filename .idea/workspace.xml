@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieWijzigGemeenteNaam geimplementeerd">
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="actief land in executes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -275,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718044375345</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="actief land in executes">
+      <option name="closed" value="true" />
+      <created>1718044698224</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1718044698224</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,6 +318,7 @@
     <MESSAGE value="Update" />
     <MESSAGE value="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd" />
     <MESSAGE value="ActieWijzigGemeenteNaam geimplementeerd" />
-    <option name="LAST_COMMIT_MESSAGE" value="ActieWijzigGemeenteNaam geimplementeerd" />
+    <MESSAGE value="actief land in executes" />
+    <option name="LAST_COMMIT_MESSAGE" value="actief land in executes" />
   </component>
 </project>
