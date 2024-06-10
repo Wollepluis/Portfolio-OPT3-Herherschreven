@@ -65,12 +65,18 @@ public class DataSeeder {
         //Adres initialization
         Adres adres1 = new Adres(amsterdam, "1067SL", "Willinklaan", 3);
         Adres adres2 = new Adres(denHaag, "2517AS", "Laan van Meerdervoort",108);
+        Adres adres3 = new Adres(denHaag, "2492RC", "Libelsingel", 72);
         Adres.alleAdressen.add(adres1);
         Adres.alleAdressen.add(adres2);
+        Adres.alleAdressen.add(adres3);
+
+        // Persoon initialization
+        Persoon markWilbrink = new Persoon("Mark Wilbrink");
 
         //AZC initialization
         AZC azc1 = new AZC(adres1, 700);
         AZC azc2 = new AZC(adres2, 600);
+        Woning woning1 = new Woning(adres3, markWilbrink);
         amsterdam.getLocaleAZCs().add(azc1);
         denHaag.getLocaleAZCs().add(azc2);
 
@@ -79,7 +85,7 @@ public class DataSeeder {
         MenuScherm subMenu1 = new MenuScherm("Beheer Land");
         MenuScherm subMenu2 = new MenuScherm("Gemeente Administratie");
         MenuScherm subMenu3 = new MenuScherm("Wijzig Land", PreMenuType.LAND);
-        MenuScherm subMenu4 = new MenuScherm("Wijzig Gemeente", PreMenuType.GEMEENTE);
+        MenuScherm subMenu4 = new MenuScherm("Beheer Gemeente", PreMenuType.GEMEENTE);
         MenuScherm subMenu5 = new MenuScherm("Beheer AZCs", PreMenuType.ADRES);
 
         MenuActie voegLandToe = new ActieVoegLandToe("Voeg een land toe aan de database");
@@ -124,6 +130,14 @@ public class DataSeeder {
         subMenu5.menu.voegKeuzeToe(subMenu4);
 
         adminAccount.setMenu(mainMenu1);
+
+        //COA Menu Initialization
+
+
+        //Gebruiker MenuInitialization
+
+
+
     }
 
     private DataSeeder() {

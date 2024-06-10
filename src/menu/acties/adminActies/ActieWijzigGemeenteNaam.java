@@ -13,7 +13,7 @@ public class ActieWijzigGemeenteNaam extends MenuActie {
     public void execute() {
         Gemeente gemeente = Gemeente.actiefGemeente;
 
-        System.out.print("Geef nieuwe naam op:");
+        System.out.print("Geef nieuwe naam op: ");
         String nieuweNaam = MyScanner.nextLine();
 
         gemeente.setNaam(nieuweNaam);
