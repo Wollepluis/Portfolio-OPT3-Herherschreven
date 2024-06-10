@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="actief land in executes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieBeschikbarePlaatsenOpvragen geimplementeerd">
+      <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieBeschikbarePlaatsenOpvragen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieRapportageOpvragen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieRapportageOpvragen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718044698224</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ActieWijzigAantalInwoners geimplementeerd">
+      <option name="closed" value="true" />
+      <created>1718051579195</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1718051579195</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ActieBeschikbarePlaatsenOpvragen geimplementeerd">
+      <option name="closed" value="true" />
+      <created>1718051923807</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1718051923807</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,6 +336,8 @@
     <MESSAGE value="vraagNaar... Methodes toegevoegd aan Land, Gemeente, Adres en Vluchteling.&#10;&#10;Nieuwe nextInt() methode in MyScanner&#10;&#10;ActieVoegAZCToe geimplementeerd" />
     <MESSAGE value="ActieWijzigGemeenteNaam geimplementeerd" />
     <MESSAGE value="actief land in executes" />
-    <option name="LAST_COMMIT_MESSAGE" value="actief land in executes" />
+    <MESSAGE value="ActieWijzigAantalInwoners geimplementeerd" />
+    <MESSAGE value="ActieBeschikbarePlaatsenOpvragen geimplementeerd" />
+    <option name="LAST_COMMIT_MESSAGE" value="ActieBeschikbarePlaatsenOpvragen geimplementeerd" />
   </component>
 </project>

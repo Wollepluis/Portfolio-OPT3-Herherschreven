@@ -92,7 +92,6 @@ public class DataSeeder {
         MenuActie wijzigGemeenteNaam = new ActieWijzigGemeenteNaam("Wijzig naam van Gemeente");
         MenuActie wijzigAantalInwoners = new ActieWijzigAantalInwoners("Wijzig aantal inwoners");
         MenuActie rapportageOpvragen = new ActieRapportageOpvragen("Rapportage opvragen");
-        MenuActie beschikbarePlaatsenOpvragen = new ActieBeschikbarePlaatsenOpvragen("Beschikbare Plaatsen Opvragen");
         MenuActie wijzigAZCAdres = new ActieWijzigAZCAdres("Wijzig Adres");
         MenuActie verwijderAZCAdres = new ActieVerwijderAZC("Verwijder AZC");
 
@@ -118,7 +117,6 @@ public class DataSeeder {
         subMenu4.menu.voegKeuzeToe(voegAZCToe);
         subMenu4.menu.voegKeuzeToe(subMenu5);
         subMenu4.menu.voegKeuzeToe(rapportageOpvragen);
-        subMenu4.menu.voegKeuzeToe(beschikbarePlaatsenOpvragen);
         subMenu4.menu.voegKeuzeToe(subMenu2);
 
         subMenu5.menu.voegKeuzeToe(wijzigAZCAdres);
