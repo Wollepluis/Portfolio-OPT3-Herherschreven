@@ -13,8 +13,7 @@ public class ActieVoegAZCToe extends MenuActie {
 
     @Override
     public void execute() {
-        System.out.println("In welke gemeente wil je een AZC toevoegen?");
-        Gemeente gemeente = Gemeente.vraagNaarGemeente();
+        Gemeente gemeente = Gemeente.actiefGemeente;
 
         while (true) {
             System.out.println("Welk adres heeft het nieuwe AZC?");
@@ -35,6 +34,7 @@ public class ActieVoegAZCToe extends MenuActie {
                 Adres.alleAdressen.add(nieuwAdres);
 
                 System.out.println("AZC toegevoegd.");
+                break;
             }
             System.out.println("Dit AZC Bestaat al.");
         }

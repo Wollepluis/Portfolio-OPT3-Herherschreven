@@ -11,8 +11,7 @@ public class ActieWijzigGemeenteNaam extends MenuActie {
 
     @Override
     public void execute() {
-        System.out.println("Van Welke gemeente wil je de naam aanpassen?");
-        Gemeente gemeente = Gemeente.vraagNaarGemeente();
+        Gemeente gemeente = Gemeente.actiefGemeente;
 
         System.out.print("Geef nieuwe naam op:");
         String nieuweNaam = MyScanner.nextLine();
