@@ -3,7 +3,8 @@ package enums;
 public enum PreMenuType {
     LAND,
     GEMEENTE,
-    ADRES,
+    WONING,
+    AZC,
     NAAM
 
 }

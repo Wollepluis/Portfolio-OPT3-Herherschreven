@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieVerwijderLand geimplementeerd" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieVerwijderLand geimplementeerd">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_Jun_2024_11_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_Jun_2024_11_04__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/AZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/AZC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/Adres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Adres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/Woning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Woning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/PreMenuType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/PreMenuType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/MenuScherm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MenuScherm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +58,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -353,5 +366,26 @@
     <MESSAGE value="ActieBeschikbarePlaatsenOpvragen verwijderd, ActieRapportageOpvragen geimplementeerd" />
     <MESSAGE value="ActieVerwijderLand geimplementeerd" />
     <option name="LAST_COMMIT_MESSAGE" value="ActieVerwijderLand geimplementeerd" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

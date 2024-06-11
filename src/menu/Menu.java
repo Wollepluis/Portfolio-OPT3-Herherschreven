@@ -1,9 +1,6 @@
 package menu;
 
-import coaData.Gemeente;
-import coaData.Land;
-import coaData.Adres;
-import coaData.Vluchteling;
+import coaData.*;
 import enums.PreMenuType;
 import scanner.MyScanner;
 
@@ -38,8 +35,11 @@ public class Menu {
             case NAAM:
                 Vluchteling.setActiefVluchteling(Vluchteling.vraagNaarVluchteling());
                 break;
-            case ADRES:
-                Adres.setActiefAdres(Adres.vraagNaarAdres());
+            case AZC:
+                Adres.setActiefAdres(AZC.vraagNaarAZCAdres());
+                break;
+            case WONING:
+                Adres.setActiefAdres(Woning.vraagNaarWoningAdres());
                 break;
         }
     }

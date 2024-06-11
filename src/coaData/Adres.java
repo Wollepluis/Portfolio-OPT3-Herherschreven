@@ -10,8 +10,6 @@ public class Adres {
     private String postcode;
     private String straatnaam;
     private int huisnummer;
-
-    public static final ArrayList<Adres> alleAdressen = new ArrayList<>();
     public static Adres actiefAdres;
 
     public Gemeente getGemeente() {
@@ -45,45 +43,8 @@ public class Adres {
         this.huisnummer = huisnummer;
     }
 
-    public static Adres getAdres(String postcode, String straatnaam, int huisnummer) {
-
-        for (Adres a : alleAdressen) {
-
-            if (postcode.equalsIgnoreCase(a.getPostcode()) && straatnaam.equalsIgnoreCase(a.getStraatnaam()) && huisnummer == a.getHuisnummer()) {
-                return a;
-            }
-        }
-        return null;
-    }
-
     public static void setActiefAdres(Adres adres) {
         actiefAdres = adres;
-    }
-
-    public static String vraagPostcode() {
-        System.out.print("Postcode: ");
-        return MyScanner.nextLine();
-    }
-
-    public static String vraagStraatnaam() {
-        System.out.print("Straatnaam: ");
-        return MyScanner.nextLine();
-    }
-    public static int vraagHuisnummer() {
-        System.out.print("Huisnummer: ");
-        return MyScanner.nextInt();
-    }
-
-    public static Adres vraagNaarAdres() {
-        while (true) {
-            System.out.println("Geef adres op.");
-            Adres adres = getAdres(vraagPostcode(), vraagStraatnaam(), vraagHuisnummer());
-
-            if (adres != null) {
-                return adres;
-            }
-            System.out.println("Dit adres staat niet in het systeem.");
-        }
     }
 
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {

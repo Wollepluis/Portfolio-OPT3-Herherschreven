@@ -21,9 +21,16 @@ public class ActieVerwijderAZC extends MenuActie {
             for (AZC azc : gemeente.getLocaleAZCs()) {
 
                 if (azc.getAdres() == adres) {
-                    Adres.alleAdressen.remove(adres);
-                    gemeente.getLocaleAZCs().remove(azc);
-                    System.out.println("AZC verwijderd.");
+
+                    if (azc.getGevestigdeVluchtelingen().isEmpty()) {
+                        AZC.alleAZCs.remove(adres);
+                        gemeente.getLocaleAZCs().remove(azc);
+                        System.out.println("AZC verwijderd.");
+                    }
+                    else {
+                        System.out.println("Er zijn nog vluchtelingen gevestigd in dit AZC.");
+                        System.out.println("Verwijderen geannuleerd");
+                    }
                     return;
                 }
             }

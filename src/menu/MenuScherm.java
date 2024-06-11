@@ -24,7 +24,7 @@ public class MenuScherm extends Menukeuze {
             case LAND -> System.out.println(": " + Land.actiefLand.getNaam());
             case NAAM -> System.out.println(": " + Vluchteling.actiefVluchteling.getNaam());
             case GEMEENTE -> System.out.println(": " + Gemeente.actiefGemeente.getNaam());
-            case ADRES -> System.out.printf(": %s %d (%s)\n", Adres.actiefAdres.getStraatnaam(), Adres.actiefAdres.getHuisnummer(), Adres.actiefAdres.getPostcode());
+            case AZC, WONING -> System.out.printf(": %s %d (%s)\n", Adres.actiefAdres.getStraatnaam(), Adres.actiefAdres.getHuisnummer(), Adres.actiefAdres.getPostcode());
             case null -> System.out.println();
         }
     }
