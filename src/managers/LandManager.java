@@ -38,8 +38,4 @@ public class LandManager {
         }
         return null;
     }
-
-    public void voegLandToe(Land land) {
-        this.alleLanden.add(land);
-    }
 }

@@ -75,8 +75,4 @@ public class Gemeente {
         }
         return totaalCapaciteit;
     }
-
-    public void stelRapportageOp() {
-
-    }
 }

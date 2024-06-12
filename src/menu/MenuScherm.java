@@ -1,7 +1,6 @@
 package menu;
 
 import enums.PreMenuType;
-import coaData.*;
 import managers.*;
 
 public class MenuScherm extends Menukeuze {
