@@ -10,7 +10,7 @@ public class Adres {
     private String postcode;
     private String straatnaam;
     private int huisnummer;
-    public static Adres actiefAdres;
+
 
     public Gemeente getGemeente() {
         return this.gemeente;
@@ -43,9 +43,6 @@ public class Adres {
         this.huisnummer = huisnummer;
     }
 
-    public static void setActiefAdres(Adres adres) {
-        actiefAdres = adres;
-    }
 
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {
         setGemeente(gemeente);

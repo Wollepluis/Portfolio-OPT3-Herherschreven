@@ -3,7 +3,9 @@ package menu.acties.adminActies;
 import coaData.AZC;
 import coaData.Adres;
 import coaData.Gemeente;
+import managers.GemeenteManager;
 import coaData.Verblijfplaats;
+import managers.VerblijfplaatsManager;
 import menu.MenuActie;
 import scanner.MyScanner;
 
@@ -14,15 +16,19 @@ public class ActieVoegAZCToe extends MenuActie {
 
     @Override
     public void execute() {
-        Gemeente gemeente = Gemeente.actiefGemeente;
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+        Gemeente gemeente = gemeenteManager.actiefGemeente;
 
         while (true) {
             System.out.println("Welk adres heeft het nieuwe AZC?");
-            String postcode = Verblijfplaats.vraagPostcode();
-            String straatnaam = Verblijfplaats.vraagStraatnaam();
-            int huisnummer = Verblijfplaats.vraagHuisnummer();
+            System.out.print("Postcode: ");
+            String postcode = MyScanner.nextLine();
+            System.out.print("Straatnaam: ");
+            String straatnaam = MyScanner.nextLine();
+            System.out.print("Huisnummer: ");
+            int huisnummer = MyScanner.nextInt(0);
 
-            Adres adres = AZC.getAZCAdres(postcode, straatnaam, huisnummer);
+            Adres adres = gemeente.getLokaalAZC(postcode, straatnaam, huisnummer).getAdres();
 
             if (adres == null) {
                 System.out.print("Hoeveel plaatsen heeft dit AZC?: ");
@@ -31,8 +37,8 @@ public class ActieVoegAZCToe extends MenuActie {
                 Adres nieuwAdres = new Adres(gemeente, postcode, straatnaam, huisnummer);
                 AZC nieuwAZC = new AZC(nieuwAdres, aantalPlaatsen);
 
+                VerblijfplaatsManager.getInstance().alleVerblijfplaatsen.add(nieuwAZC);
                 gemeente.getLocaleAZCs().add(nieuwAZC);
-                AZC.alleAZCs.add(nieuwAdres);
 
                 System.out.println("AZC toegevoegd.");
                 break;

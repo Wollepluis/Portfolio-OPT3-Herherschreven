@@ -1,6 +1,7 @@
 package menu.acties.adminActies;
 
 import coaData.Gemeente;
+import managers.GemeenteManager;
 import menu.MenuActie;
 import scanner.MyScanner;
 
@@ -11,7 +12,7 @@ public class ActieWijzigAantalInwoners extends MenuActie {
 
     @Override
     public void execute() {
-        Gemeente gemeente = Gemeente.actiefGemeente;
+        Gemeente gemeente = GemeenteManager.getInstance().actiefGemeente;
 
         System.out.print("Geef het aantal inwoners op: ");
         int nieuwAantalInwoners = MyScanner.nextInt();

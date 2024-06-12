@@ -1,7 +1,9 @@
 package menu.acties.adminActies;
 
+import coaData.AZC;
 import coaData.Adres;
 import coaData.Verblijfplaats;
+import managers.VerblijfplaatsManager;
 import menu.MenuActie;
 import scanner.MyScanner;
 
@@ -12,12 +14,16 @@ public class ActieWijzigAZCAdres extends MenuActie {
 
     @Override
     public void execute() {
-        Adres adres = Adres.actiefAdres;
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+        AZC azc = verblijfplaatsManager.actiefAZC;
 
         System.out.println("Geef de nieuwe gegevens op.");
-        adres.setPostcode(MyScanner.nextLine());
-        adres.setStraatnaam(MyScanner.nextLine());
-        adres.setHuisnummer(MyScanner.nextInt());
+        System.out.print("Postcode: ");
+        azc.getAdres().setPostcode(MyScanner.nextLine());
+        System.out.print("Straatnaam: ");
+        azc.getAdres().setStraatnaam(MyScanner.nextLine());
+        System.out.print("Huisnummer: ");
+        azc.getAdres().setHuisnummer(MyScanner.nextInt());
         System.out.println("Adres gewijzigd.");
     }
 }

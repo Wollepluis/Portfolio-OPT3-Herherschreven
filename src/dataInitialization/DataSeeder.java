@@ -2,6 +2,7 @@ package dataInitialization;
 
 import account.*;
 import coaData.*;
+import managers.*;
 import menu.*;
 import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
@@ -40,6 +41,12 @@ public class DataSeeder {
     }
 
     private void initialize() {
+        //Manager initialization
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+        LandManager landManager = LandManager.getInstance();
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+        VluchtelingManager vluchtelingManager = VluchtelingManager.getInstance();
+
         //Gebruiker initialization
         Account gebruikersAccount = new Account("Gebruiker");
         COAAccount coaAccount = new COAAccount("coa");
@@ -48,37 +55,40 @@ public class DataSeeder {
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
+        // Persoon initialization
+        Persoon markWilbrink = new Persoon("Mark Wilbrink");
+        markWilbrink.setAccount(gebruikersAccount);
+
         //Land initialization
         Land ghana = new Land("Ghana", false);
         Land afghanistan = new Land("Afghanistan", true);
-        Land.alleLanden.add(ghana);
-        Land.alleLanden.add(afghanistan);
+        landManager.alleLanden.add(ghana);
+        landManager.alleLanden.add(afghanistan);
 
         //Gemeente initialization
         Gemeente denHaag = new Gemeente("Den Haag", 562000);
         Gemeente amsterdam = new Gemeente("Amsterdam", 918000);
         Gemeente rotterdam = new Gemeente("Rotterdam", 663000);
-        Gemeente.alleGemeentes.add(denHaag);
-        Gemeente.alleGemeentes.add(amsterdam);
-        Gemeente.alleGemeentes.add(rotterdam);
+        gemeenteManager.alleGemeentes.add(denHaag);
+        gemeenteManager.alleGemeentes.add(amsterdam);
+        gemeenteManager.alleGemeentes.add(rotterdam);
 
         //Adres initialization
         Adres adres1 = new Adres(amsterdam, "1067SL", "Willinklaan", 3);
         Adres adres2 = new Adres(denHaag, "2517AS", "Laan van Meerdervoort",108);
         Adres adres3 = new Adres(denHaag, "2492RC", "Libelsingel", 72);
-        AZC.alleAZCs.add(adres1);
-        AZC.alleAZCs.add(adres2);
-        Woning.alleWoningen.add(adres3);
-
-        // Persoon initialization
-        Persoon markWilbrink = new Persoon("Mark Wilbrink");
 
         //AZC initialization
         AZC azc1 = new AZC(adres1, 700);
         AZC azc2 = new AZC(adres2, 600);
-        Woning woning1 = new Woning(adres3, markWilbrink);
         amsterdam.getLocaleAZCs().add(azc1);
         denHaag.getLocaleAZCs().add(azc2);
+        verblijfplaatsManager.alleVerblijfplaatsen.add(azc1);
+        verblijfplaatsManager.alleVerblijfplaatsen.add(azc2);
+
+        //Woning initialization
+        Woning woning1 = new Woning(adres3, markWilbrink);
+        verblijfplaatsManager.alleVerblijfplaatsen.add(woning1);
 
         //Admin Menu initialization
         MenuScherm mainMenu1 = new MenuScherm("Main menu");

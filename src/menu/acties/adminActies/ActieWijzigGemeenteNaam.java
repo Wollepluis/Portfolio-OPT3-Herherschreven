@@ -1,6 +1,7 @@
 package menu.acties.adminActies;
 
 import coaData.Gemeente;
+import managers.GemeenteManager;
 import menu.MenuActie;
 import scanner.MyScanner;
 
@@ -11,12 +12,19 @@ public class ActieWijzigGemeenteNaam extends MenuActie {
 
     @Override
     public void execute() {
-        Gemeente gemeente = Gemeente.actiefGemeente;
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+        Gemeente gemeente = gemeenteManager.actiefGemeente;
 
-        System.out.print("Geef nieuwe naam op: ");
-        String nieuweNaam = MyScanner.nextLine();
+        while (true) {
+            System.out.print("Geef nieuwe naam op: ");
+            String nieuweNaam = MyScanner.nextLine();
 
-        gemeente.setNaam(nieuweNaam);
-        System.out.println("Naam gewijzigd.");
+            if (gemeenteManager.getGemeente(nieuweNaam) == null) {
+                gemeente.setNaam(nieuweNaam);
+                System.out.println("Naam gewijzigd.");
+                break;
+            }
+            System.out.println("Deze gemeente bestaat al.");
+        }
     }
 }

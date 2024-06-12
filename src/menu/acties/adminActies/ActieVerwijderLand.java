@@ -1,6 +1,7 @@
 package menu.acties.adminActies;
 
 import coaData.Land;
+import managers.LandManager;
 import menu.MenuActie;
 import scanner.ClosedQuestion;
 
@@ -11,12 +12,15 @@ public class ActieVerwijderLand extends MenuActie {
 
     @Override
     public void execute() {
-        if (ClosedQuestion.question("Weet u zeker dat u " + Land.actiefLand.getNaam() + " wilt verwijderen?")) {
-            Land.alleLanden.remove(Land.actiefLand);
-            System.out.println(Land.actiefLand.getNaam() + " verwijderd.");
+        LandManager landManager = LandManager.getInstance();
+        Land land = landManager.actiefLand;
+
+        if (ClosedQuestion.question("Weet u zeker dat u " + land.getNaam() + " wilt verwijderen?")) {
+            landManager.alleLanden.remove(land);
+            System.out.println(land.getNaam() + " verwijderd.");
         }
         else {
-            System.out.println("Cancelled");
+            System.out.println("Verwijderen geannuleerd");
         }
     }
 }

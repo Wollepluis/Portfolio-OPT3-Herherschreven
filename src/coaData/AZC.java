@@ -23,35 +23,13 @@ public class AZC extends Verblijfplaats {
         return this.gevestigdeVluchtelingen;
     }
 
-    public void addVluchteling(Vluchteling vluchteling) {
+    public void voegVluchtelingToe(Vluchteling vluchteling) {
         this.gevestigdeVluchtelingen.add(vluchteling);
         vluchtelingAdded.invoke(this, new VluchtelingEventArgs(vluchteling));
     }
 
     public int getBeschikbarePlaatsen() {
         return aantalPlaatsen - gevestigdeVluchtelingen.size();
-    }
-    public static Adres vraagNaarAZCAdres() {
-        while (true) {
-            System.out.println("Geef adres op.");
-            Adres adres = getAZCAdres(vraagPostcode(), vraagStraatnaam(), vraagHuisnummer());
-
-            if (adres != null) {
-                return adres;
-            }
-            System.out.println("Dit adres staat niet in het systeem.");
-        }
-    }
-
-    public static Adres getAZCAdres(String postcode, String straatnaam, int huisnummer) {
-
-        for (Adres a : alleAZCs) {
-
-            if (postcode.equalsIgnoreCase(a.getPostcode()) && straatnaam.equalsIgnoreCase(a.getStraatnaam()) && huisnummer == a.getHuisnummer()) {
-                return a;
-            }
-        }
-        return null;
     }
 
 

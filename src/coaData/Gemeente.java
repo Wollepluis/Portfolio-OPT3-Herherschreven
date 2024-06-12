@@ -1,9 +1,6 @@
 package coaData;
 
-import events.EventArgs;
-import events.IEventListener;
 import events.VluchtelingEventArgs;
-import scanner.MyScanner;
 
 import java.util.ArrayList;
 
@@ -11,9 +8,8 @@ public class Gemeente {
 
     private String naam;
     private int aantalInwoners;
-    private final ArrayList<AZC> localeAZCs = new ArrayList<>();
-    public static final ArrayList<Gemeente> alleGemeentes = new ArrayList<>();
-    public static Gemeente actiefGemeente;
+    private final ArrayList<AZC> localeAZCs;
+
 
     public String getNaam() {
         return this.naam;
@@ -31,36 +27,29 @@ public class Gemeente {
         this.aantalInwoners = aantalInwoners;
     }
 
-    public static Gemeente getGemeente(String gemeentenaam) {
+    public ArrayList<AZC> getLocaleAZCs() {
+        return localeAZCs;
+    }
 
-        for (Gemeente g : alleGemeentes) {
 
-            if (gemeentenaam.equalsIgnoreCase(g.getNaam())) {
-                return g;
+    public Gemeente(String naam, int aantalInwoners) {
+        setNaam(naam);
+        setAantalInwoners(aantalInwoners);
+        this.localeAZCs = new ArrayList<>();
+    }
+
+
+    public AZC getLokaalAZC(String postcode, String straatnaam, int huisnummer) {
+
+        for (AZC a : localeAZCs) {
+
+            if (a.getAdres().getPostcode().equalsIgnoreCase(postcode) && a.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && a.getAdres().getHuisnummer() == huisnummer) {
+                return a;
             }
         }
         return null;
     }
 
-    public ArrayList<AZC> getLocaleAZCs() {
-        return localeAZCs;
-    }
-
-    public static void setActiefGemeente(Gemeente gemeente) {
-        actiefGemeente = gemeente;
-    }
-
-    public static Gemeente vraagNaarGemeente() {
-        while (true) {
-            System.out.print("Gemeente: ");
-            Gemeente gemeente = getGemeente(MyScanner.nextLine());
-
-            if (gemeente != null) {
-                return gemeente;
-            }
-            System.out.println("Deze gemeente staat niet in het systeem.");
-        }
-    }
 
     public void voegAZCToe(AZC azc) {
         localeAZCs.add(azc);
@@ -68,23 +57,20 @@ public class Gemeente {
         azc.vluchtelingAdded.subscribe((sender, args) -> {
 
             if (args instanceof VluchtelingEventArgs vluchtelingEventArgs) {
-                System.out.println("Vluchteling toegevoegd: " + vluchtelingEventArgs.getVluchteling());
+                System.out.println("Vluchteling toegevoegd: " + vluchtelingEventArgs.getVluchteling().getNaam());
             }
         });
     }
 
+
     public void verwijderAZC(Adres adres) {
-        localeAZCs.removeIf(azc -> azc.getAdres().equals(adres));
+       localeAZCs.removeIf(azc -> azc.getAdres().equals(adres));
     }
 
-    public Gemeente(String naam, int aantalInwoners) {
-        setNaam(naam);
-        setAantalInwoners(aantalInwoners);
-    }
 
     public int getTotaalcapaciteit() {
-
         int totaalCapaciteit = 0;
+
         for (AZC azc : localeAZCs) {
             totaalCapaciteit += azc.getAantalPlaatsen();
         }

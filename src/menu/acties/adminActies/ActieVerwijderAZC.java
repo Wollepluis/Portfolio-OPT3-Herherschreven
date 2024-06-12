@@ -3,6 +3,9 @@ package menu.acties.adminActies;
 import coaData.AZC;
 import coaData.Adres;
 import coaData.Gemeente;
+import coaData.Verblijfplaats;
+import managers.GemeenteManager;
+import managers.VerblijfplaatsManager;
 import menu.MenuActie;
 import scanner.ClosedQuestion;
 
@@ -13,28 +16,25 @@ public class ActieVerwijderAZC extends MenuActie {
 
     @Override
     public void execute() {
-        Adres adres = Adres.actiefAdres;
-        Gemeente gemeente = Gemeente.actiefGemeente;
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+        Gemeente gemeente = gemeenteManager.actiefGemeente;
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+        AZC azc = verblijfplaatsManager.actiefAZC;
 
         if (ClosedQuestion.question("Weet u zeker dat u dit AZC wilt verwijderen?")) {
 
-            for (AZC azc : gemeente.getLocaleAZCs()) {
+            if (azc.getGevestigdeVluchtelingen().isEmpty()) {
 
-                if (azc.getAdres() == adres) {
+                gemeente.getLocaleAZCs().remove(verblijfplaatsManager.actiefAZC);
+                verblijfplaatsManager.alleVerblijfplaatsen.remove(verblijfplaatsManager.actiefAZC);
 
-                    if (azc.getGevestigdeVluchtelingen().isEmpty()) {
-                        AZC.alleAZCs.remove(adres);
-                        gemeente.getLocaleAZCs().remove(azc);
-                        System.out.println("AZC verwijderd.");
-                    }
-                    else {
-                        System.out.println("Er zijn nog vluchtelingen gevestigd in dit AZC.");
-                        System.out.println("Verwijderen geannuleerd");
-                    }
-                    return;
-                }
+                System.out.println("AZC verwijderd.");
             }
-            System.out.println("Geen AZC gevonden op dit adres.");
+            else {
+
+                System.out.println("Er zijn nog vluchtelingen gevestigd in dit AZC.");
+                System.out.println("Verwijderen geannuleerd");
+            }
         }
     }
 }

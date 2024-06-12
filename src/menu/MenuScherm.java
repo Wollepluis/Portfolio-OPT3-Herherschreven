@@ -2,11 +2,17 @@ package menu;
 
 import enums.PreMenuType;
 import coaData.*;
+import managers.*;
 
 public class MenuScherm extends Menukeuze {
 
     public Menu menu = new Menu(this);
     private PreMenuType type;
+
+    LandManager landManager = LandManager.getInstance();
+    VluchtelingManager vluchtelingManager = VluchtelingManager.getInstance();
+    GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+    VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
     public MenuScherm(String naam) {
         super(naam);
@@ -19,12 +25,14 @@ public class MenuScherm extends Menukeuze {
 
     @Override
     public void printTitel() {
+
         super.printTitel();
         switch (type) {
-            case LAND -> System.out.println(": " + Land.actiefLand.getNaam());
-            case NAAM -> System.out.println(": " + Vluchteling.actiefVluchteling.getNaam());
-            case GEMEENTE -> System.out.println(": " + Gemeente.actiefGemeente.getNaam());
-            case AZC, WONING -> System.out.printf(": %s %d (%s)\n", Adres.actiefAdres.getStraatnaam(), Adres.actiefAdres.getHuisnummer(), Adres.actiefAdres.getPostcode());
+            case LAND -> System.out.println(": " + landManager.actiefLand.getNaam());
+            case NAAM -> System.out.println(": " + vluchtelingManager.actiefVluchteling.getNaam());
+            case GEMEENTE -> System.out.println(": " + gemeenteManager.actiefGemeente.getNaam());
+            case AZC-> System.out.printf(": %s %d (%s)\n", verblijfplaatsManager.actiefAZC.getAdres().getStraatnaam(), verblijfplaatsManager.actiefAZC.getAdres().getHuisnummer(), verblijfplaatsManager.actiefAZC.getAdres().getPostcode());
+            case WONING-> System.out.printf(": %s %d (%s)\n", verblijfplaatsManager.actiefWoning.getAdres().getStraatnaam(), verblijfplaatsManager.actiefWoning.getAdres().getHuisnummer(), verblijfplaatsManager.actiefWoning.getAdres().getPostcode());
             case null -> System.out.println();
         }
     }
@@ -33,6 +41,10 @@ public class MenuScherm extends Menukeuze {
     public void execute() {
 
         if (type != null) {
+
+            if (type == PreMenuType.GEMEENTE) {
+                verblijfplaatsManager.resetActiefVerblijfplaats();
+            }
             menu.toonPreMenu(type);
         }
         try {

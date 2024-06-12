@@ -2,6 +2,7 @@ package menu.acties.adminActies;
 
 import coaData.AZC;
 import coaData.Gemeente;
+import managers.GemeenteManager;
 import menu.MenuActie;
 
 public class ActieRapportageOpvragen extends MenuActie {
@@ -11,7 +12,9 @@ public class ActieRapportageOpvragen extends MenuActie {
 
     @Override
     public void execute() {
-        Gemeente gemeente = Gemeente.actiefGemeente;
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
+
+        Gemeente gemeente = gemeenteManager.actiefGemeente;
 
         System.out.printf("\n==== Rapportage %s ====\n", gemeente.getNaam());
         System.out.printf("\nAantal Inwoners: %d\n", gemeente.getAantalInwoners());
