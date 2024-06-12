@@ -4,42 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="ActieVerwijderLand geimplementeerd">
-      <change afterPath="$PROJECT_DIR$/src/managers/GemeenteManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/managers/LandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/managers/VerblijfplaatsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/managers/VluchtelingManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/managers/WoningManager.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Managers toegevoegd&#10;&#10;Acties herschreven">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/Beveiliging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Beveiliging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/AZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/AZC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/Adres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Adres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/Gemeente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Gemeente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coaData/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Land.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Vluchteling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Vluchteling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Woning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Woning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/PreMenuType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/PreMenuType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/MenuScherm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MenuScherm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieRapportageOpvragen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieRapportageOpvragen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderLand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderLand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegGemeenteToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegGemeenteToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegLandToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegLandToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAZCAdres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAZCAdres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigAantalInwoners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigGemeenteNaam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigGemeenteNaam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigLandNaam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigLandNaam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigVeiligheid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieWijzigVeiligheid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/EventArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/EventArgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/IEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/IEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/VluchtelingEventArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/VluchtelingEventArgs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,7 +70,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RunManager">
@@ -343,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718056397195</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Managers toegevoegd&#10;&#10;Acties herschreven">
+      <option name="closed" value="true" />
+      <created>1718204525509</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1718204525509</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UML-Geupdate" />
     <MESSAGE value="UML-Geupdate en menuTest code.txt toegevoegd" />
     <MESSAGE value="UML geupdate" />
     <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner" />
@@ -383,6 +375,7 @@
     <MESSAGE value="ActieBeschikbarePlaatsenOpvragen geimplementeerd" />
     <MESSAGE value="ActieBeschikbarePlaatsenOpvragen verwijderd, ActieRapportageOpvragen geimplementeerd" />
     <MESSAGE value="ActieVerwijderLand geimplementeerd" />
-    <option name="LAST_COMMIT_MESSAGE" value="ActieVerwijderLand geimplementeerd" />
+    <MESSAGE value="Managers toegevoegd&#10;&#10;Acties herschreven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Managers toegevoegd&#10;&#10;Acties herschreven" />
   </component>
 </project>

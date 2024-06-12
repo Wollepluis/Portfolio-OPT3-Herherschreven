@@ -1,3 +1,6 @@
+/**
+ * Een extensie van 'EventArgs' die het object 'Vluchteling' meegeeft als argument.
+ */
 package events;
 
 import coaData.Vluchteling;

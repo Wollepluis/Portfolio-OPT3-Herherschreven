@@ -23,6 +23,10 @@ public class AZC extends Verblijfplaats {
         return this.gevestigdeVluchtelingen;
     }
 
+    /**
+     * Wanneer er een vluchteling wordt toegevoegd wordt het specifieke AZC - waaraan de vluchteling is toegevoegd -
+     * meegegeven als sender met desbetreffende vluchteling-object.
+     */
     public void voegVluchtelingToe(Vluchteling vluchteling) {
         this.gevestigdeVluchtelingen.add(vluchteling);
         vluchtelingAdded.invoke(this, new VluchtelingEventArgs(vluchteling));
@@ -31,7 +35,6 @@ public class AZC extends Verblijfplaats {
     public int getBeschikbarePlaatsen() {
         return aantalPlaatsen - gevestigdeVluchtelingen.size();
     }
-
 
     public AZC(Adres adres, int aantalPlaatsen) {
         super(adres);

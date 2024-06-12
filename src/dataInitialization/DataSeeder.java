@@ -8,13 +8,11 @@ import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
 import enums.*;
 
-
 import java.util.ArrayList;
 
 public class DataSeeder {
 
     private static DataSeeder instance = null;
-
     private final ArrayList<Account> accounts;
 
     public static DataSeeder getInstance() {
@@ -145,8 +143,6 @@ public class DataSeeder {
 
 
         //Gebruiker MenuInitialization
-
-
 
     }
 

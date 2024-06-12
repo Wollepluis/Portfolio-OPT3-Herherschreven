@@ -1,9 +1,6 @@
 package managers;
 
-
-import coaData.AZC;
 import coaData.Gemeente;
-import scanner.MyScanner;
 
 import java.util.ArrayList;
 
@@ -12,7 +9,6 @@ public class GemeenteManager {
     private static GemeenteManager instance;
     public final ArrayList<Gemeente> alleGemeentes;
     public Gemeente actiefGemeente;
-
 
     public static GemeenteManager getInstance() {
 
@@ -23,17 +19,14 @@ public class GemeenteManager {
         return instance;
     }
 
-
     public void setActiefGemeente(Gemeente gemeente) {
         this.actiefGemeente = gemeente;
     }
-
 
     private GemeenteManager() {
         this.alleGemeentes = new ArrayList<>();
         this.setActiefGemeente(null);
     }
-
 
     public Gemeente getGemeente(String gemeentenaam) {
 

@@ -11,7 +11,6 @@ public class VerblijfplaatsManager {
     public AZC actiefAZC;
     public Woning actiefWoning;
 
-
     public static VerblijfplaatsManager getInstance() {
 
         if (instance == null) {
@@ -20,7 +19,6 @@ public class VerblijfplaatsManager {
         }
         return instance;
     }
-
 
     public void setActiefAZC(AZC actiefAZC) {
         this.actiefAZC = actiefAZC;
@@ -40,7 +38,6 @@ public class VerblijfplaatsManager {
         this.alleVerblijfplaatsen = new ArrayList<>();
         this.setActiefAZC(null);
     }
-
 
     public Verblijfplaats getVerblijfplaats(String postcode, String straatnaam, int huisnummer) {
 

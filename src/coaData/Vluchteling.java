@@ -1,14 +1,9 @@
 package coaData;
 
-import scanner.MyScanner;
-
-import java.util.ArrayList;
-
 public class Vluchteling extends Persoon {
 
     private Land landVanHerkomst;
     private Dossier dossier;
-
 
     public Land getLandVanHerkomst() {
         return this.landVanHerkomst;
@@ -25,7 +20,6 @@ public class Vluchteling extends Persoon {
     public void setDossier(Dossier dossier) {
         this.dossier = dossier;
     }
-
 
     public Vluchteling(String naam, Land landVanHerkomst) {
         super(naam);

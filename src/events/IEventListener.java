@@ -1,3 +1,7 @@
+/**
+ * Functional Interface heeft één abstracte methode waardoor deze makkelijk aangeroepen kan worden met een lambda.
+ * Elke "subscriber" MOET 'invoke()' bevatten.
+ */
 package events;
 
 @FunctionalInterface

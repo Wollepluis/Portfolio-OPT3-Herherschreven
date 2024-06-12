@@ -1,15 +1,14 @@
 package managers;
 
 import coaData.Land;
-import scanner.MyScanner;
 
 import java.util.ArrayList;
 
 public class LandManager {
+
     private static LandManager instance;
     public final ArrayList<Land> alleLanden;
     public Land actiefLand;
-
 
     public static LandManager getInstance() {
 
@@ -20,17 +19,14 @@ public class LandManager {
         return instance;
     }
 
-
     public void setActiefLand(Land land) {
         this.actiefLand = land;
     }
-
 
     private LandManager() {
         this.alleLanden = new ArrayList<>();
         this.setActiefLand(null);
     }
-
 
     public Land getLand(String landnaam) {
 
@@ -42,7 +38,6 @@ public class LandManager {
         }
         return null;
     }
-
 
     public void voegLandToe(Land land) {
         this.alleLanden.add(land);

@@ -31,13 +31,11 @@ public class Gemeente {
         return localeAZCs;
     }
 
-
     public Gemeente(String naam, int aantalInwoners) {
         setNaam(naam);
         setAantalInwoners(aantalInwoners);
         this.localeAZCs = new ArrayList<>();
     }
-
 
     public AZC getLokaalAZC(String postcode, String straatnaam, int huisnummer) {
 
@@ -50,7 +48,10 @@ public class Gemeente {
         return null;
     }
 
-
+    /**
+     * Wanneer er een AZC aangemaakt wordt, wordt deze direct toegevoegd aan de lijst met listeners.
+     * De listener waaraan een vluchteling wordt toegevoegd krijgt een melding.
+     */
     public void voegAZCToe(AZC azc) {
         localeAZCs.add(azc);
 
@@ -62,11 +63,9 @@ public class Gemeente {
         });
     }
 
-
     public void verwijderAZC(Adres adres) {
        localeAZCs.removeIf(azc -> azc.getAdres().equals(adres));
     }
-
 
     public int getTotaalcapaciteit() {
         int totaalCapaciteit = 0;

@@ -1,3 +1,8 @@
+/**
+ * Beheert de lijst van "listeners" en roept deze aan wanneer er een gebeurtenis plaatsvindt.
+ *
+ * De methode 'invoke()' roept alle invoke-methoden van alle listeners aan met de gegeven sender en argumenten.
+ */
 package events;
 
 import java.util.ArrayList;

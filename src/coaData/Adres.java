@@ -1,16 +1,11 @@
 package coaData;
 
-import scanner.MyScanner;
-
-import java.util.ArrayList;
-
 public class Adres {
 
     private Gemeente gemeente;
     private String postcode;
     private String straatnaam;
     private int huisnummer;
-
 
     public Gemeente getGemeente() {
         return this.gemeente;
@@ -42,7 +37,6 @@ public class Adres {
     public void setHuisnummer(int huisnummer) {
         this.huisnummer = huisnummer;
     }
-
 
     public Adres(Gemeente gemeente, String postcode, String straatnaam, int huisnummer) {
         setGemeente(gemeente);

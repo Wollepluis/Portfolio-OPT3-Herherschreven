@@ -43,7 +43,6 @@ public class Menu {
         }
     }
 
-
     public void vraagNaarGemeente() {
 
         while (true) {
@@ -58,7 +57,6 @@ public class Menu {
         }
     }
 
-
     public void vraagNaarVluchteling() {
 
         while (true) {
@@ -72,7 +70,6 @@ public class Menu {
             System.out.println("Deze vluchteling staat niet in het systeem.");
         }
     }
-
 
     public void vraagNaarVerblijfplaats() {
 
@@ -98,7 +95,6 @@ public class Menu {
             System.out.println("Dit adres staat niet in het systeem.");
         }
     }
-
 
     public void toonPreMenu(PreMenuType preMenuType) {
 
