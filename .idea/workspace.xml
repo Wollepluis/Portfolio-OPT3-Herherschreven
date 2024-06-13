@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Template method pattern&#10;&#10;PersoonManager">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -357,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718296931699</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Workspace">
+      <option name="closed" value="true" />
+      <created>1718316218450</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1718316218450</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner&#10;&#10;package 'acties' aangemaakt" />
     <MESSAGE value="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
     <MESSAGE value="MENU WERKT EINDELIJK!!!!!!!!!&#10;&#10;Coa en Admin account toegevoegd&#10;&#10;DataSeeder en Beveiliging Toegevoegd&#10;&#10;Programma kan (Technisch gezien) gerund worden" />
     <MESSAGE value="Imports uit Main gehaald" />
@@ -397,6 +402,7 @@
     <MESSAGE value="Kleine verbeteringen in alle classes" />
     <MESSAGE value="Nieuw UML" />
     <MESSAGE value="Template method pattern&#10;&#10;PersoonManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template method pattern&#10;&#10;PersoonManager" />
+    <MESSAGE value="Workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
   </component>
 </project>
