@@ -16,4 +16,14 @@ public class Woning extends Verblijfplaats {
         super(adres);
         setEigenaar(eigenaar);
     }
+
+    @Override
+    public void vertrekVerblijfplaats(Persoon persoon) {
+
+    }
+
+    @Override
+    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+
+    }
 }

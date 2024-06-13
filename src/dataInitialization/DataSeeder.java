@@ -43,7 +43,7 @@ public class DataSeeder {
         GemeenteManager gemeenteManager = GemeenteManager.getInstance();
         LandManager landManager = LandManager.getInstance();
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
-        VluchtelingManager vluchtelingManager = VluchtelingManager.getInstance();
+        PersoonManager persoonManager = PersoonManager.getInstance();
 
         //Gebruiker initialization
         Account gebruikersAccount = new Account("Gebruiker");

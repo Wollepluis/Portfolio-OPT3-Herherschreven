@@ -1,31 +1,32 @@
 package managers;
 
+import coaData.Persoon;
 import coaData.Vluchteling;
 
 import java.util.ArrayList;
 
-public class VluchtelingManager {
+public class PersoonManager {
 
-    private static VluchtelingManager instance;
+    private static PersoonManager instance;
     public final ArrayList<Vluchteling> alleVluchtelingen;
-    public Vluchteling actiefVluchteling;
+    public Persoon actiefPersoon;
 
-    public static VluchtelingManager getInstance() {
+    public static PersoonManager getInstance() {
 
         if (instance == null) {
 
-            instance = new VluchtelingManager();
+            instance = new PersoonManager();
         }
         return instance;
     }
 
-    public void setActiefVluchteling(Vluchteling vluchteling) {
-        this.actiefVluchteling = vluchteling;
+    private PersoonManager() {
+        this.alleVluchtelingen = new ArrayList<>();
+        this.setActiefPersoon(null);
     }
 
-    private VluchtelingManager() {
-        this.alleVluchtelingen = new ArrayList<>();
-        this.setActiefVluchteling(null);
+    public void setActiefPersoon(Vluchteling vluchteling) {
+        this.actiefPersoon = vluchteling;
     }
 
     public Vluchteling getVluchteling(String vluchtelingNaam) {

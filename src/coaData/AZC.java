@@ -40,4 +40,14 @@ public class AZC extends Verblijfplaats {
         super(adres);
         setAantalPlaatsen(aantalPlaatsen);
     }
+
+    @Override
+    public void vertrekVerblijfplaats(Persoon persoon) {
+
+    }
+
+    @Override
+    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+
+    }
 }

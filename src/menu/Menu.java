@@ -13,7 +13,7 @@ public class Menu {
     private final ArrayList<Menukeuze> menukeuzes = new ArrayList<>();
 
     LandManager landManager = LandManager.getInstance();
-    VluchtelingManager vluchtelingManager = VluchtelingManager.getInstance();
+    PersoonManager persoonManager = PersoonManager.getInstance();
     GemeenteManager gemeenteManager = GemeenteManager.getInstance();
     VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
@@ -61,10 +61,10 @@ public class Menu {
 
         while (true) {
             System.out.print("Naam: ");
-            Vluchteling vluchteling = vluchtelingManager.getVluchteling(MyScanner.nextLine());
+            Vluchteling vluchteling = persoonManager.getVluchteling(MyScanner.nextLine());
 
             if (vluchteling != null) {
-                vluchtelingManager.setActiefVluchteling(vluchteling);
+                persoonManager.setActiefPersoon(vluchteling);
                 break;
             }
             System.out.println("Deze vluchteling staat niet in het systeem.");

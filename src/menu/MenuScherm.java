@@ -9,7 +9,7 @@ public class MenuScherm extends Menukeuze {
     private PreMenuType type;
 
     LandManager landManager = LandManager.getInstance();
-    VluchtelingManager vluchtelingManager = VluchtelingManager.getInstance();
+    PersoonManager persoonManager = PersoonManager.getInstance();
     GemeenteManager gemeenteManager = GemeenteManager.getInstance();
     VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
@@ -28,7 +28,7 @@ public class MenuScherm extends Menukeuze {
         super.printTitel();
         switch (type) {
             case LAND -> System.out.println(": " + landManager.actiefLand.getNaam());
-            case NAAM -> System.out.println(": " + vluchtelingManager.actiefVluchteling.getNaam());
+            case NAAM -> System.out.println(": " + persoonManager.actiefPersoon.getNaam());
             case GEMEENTE -> System.out.println(": " + gemeenteManager.actiefGemeente.getNaam());
             case AZC-> System.out.printf(": %s %d (%s)\n", verblijfplaatsManager.actiefAZC.getAdres().getStraatnaam(), verblijfplaatsManager.actiefAZC.getAdres().getHuisnummer(), verblijfplaatsManager.actiefAZC.getAdres().getPostcode());
             case WONING-> System.out.printf(": %s %d (%s)\n", verblijfplaatsManager.actiefWoning.getAdres().getStraatnaam(), verblijfplaatsManager.actiefWoning.getAdres().getHuisnummer(), verblijfplaatsManager.actiefWoning.getAdres().getPostcode());
