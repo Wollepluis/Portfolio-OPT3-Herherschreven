@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Kleine verbeteringen in alle classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Gemeente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Gemeente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/managers/LandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/LandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/MenuScherm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/MenuScherm.java" afterDir="false" />
-    </list>
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Nieuw UML" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -337,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718226500990</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Nieuw UML">
+      <option name="closed" value="true" />
+      <created>1718235717414</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1718235717414</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UML geupdate" />
     <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner" />
     <MESSAGE value="package 'menu' met de classes aangemaakt:&#10;- Menu&#10;- MenuActie&#10;- Menukeuze&#10;- MenuScherm&#10;&#10;package 'scanner' met de classes aangemaakt:&#10;- MyScanner&#10;&#10;package 'acties' aangemaakt" />
     <MESSAGE value="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
@@ -377,6 +378,7 @@
     <MESSAGE value="ActieVerwijderLand geimplementeerd" />
     <MESSAGE value="Managers toegevoegd&#10;&#10;Acties herschreven" />
     <MESSAGE value="Kleine verbeteringen in alle classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kleine verbeteringen in alle classes" />
+    <MESSAGE value="Nieuw UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nieuw UML" />
   </component>
 </project>
