@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Dossier aanmaken methode aangemaakt">
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/gebruikerActies/ActieAdresRegistreren.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/gebruikerActies/ActieDossierInzien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/acties/gebruikerActies/ActieProfiel.java" afterDir="false" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Acount acties aangemaakr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/acties/coaActies/ActieOverplaatsen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/coaActies/ActieOverplaatsen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718477163571</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Acount acties aangemaakr">
+      <option name="closed" value="true" />
+      <created>1718480074523</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718480074523</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Alle classes in package coaData aangemaakt" />
     <MESSAGE value="package events en classes erin aangemaakt" />
     <MESSAGE value="EventHandler Classes geimplementeerd" />
     <MESSAGE value="." />
@@ -435,6 +436,7 @@
     <MESSAGE value="uml" />
     <MESSAGE value="Menu Upgrade en eerste deel van MTP" />
     <MESSAGE value="Dossier aanmaken methode aangemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dossier aanmaken methode aangemaakt" />
+    <MESSAGE value="Acount acties aangemaakr" />
+    <option name="LAST_COMMIT_MESSAGE" value="Acount acties aangemaakr" />
   </component>
 </project>
