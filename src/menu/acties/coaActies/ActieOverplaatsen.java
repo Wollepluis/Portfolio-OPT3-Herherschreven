@@ -13,6 +13,6 @@ public class ActieOverplaatsen extends MenuActie {
     public void execute() {
 
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
-        verblijfplaatsManager.verhuis();
+//        verblijfplaatsManager.verhuis();
     }
 }

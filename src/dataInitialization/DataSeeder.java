@@ -1,13 +1,20 @@
 package dataInitialization;
 
-import account.*;
+import account.Account;
+import account.AdminAccount;
+import account.COAAccount;
 import coaData.*;
-import managers.*;
-import menu.*;
+import enums.PreMenuType;
+import managers.GemeenteManager;
+import managers.LandManager;
+import managers.PersoonManager;
+import managers.VerblijfplaatsManager;
+import menu.MenuActie;
+import menu.MenuScherm;
 import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
-import enums.*;
 import menu.acties.coaActies.ActieOverplaatsen;
+import menu.acties.gebruikerActies.*;
 
 import java.util.ArrayList;
 
@@ -47,10 +54,8 @@ public class DataSeeder {
         PersoonManager persoonManager = PersoonManager.getInstance();
 
         //Gebruiker initialization
-        Account gebruikersAccount = new Account("Gebruiker");
         COAAccount coaAccount = new COAAccount("coa");
         AdminAccount adminAccount = new AdminAccount("Admin");
-        voegGebruikerToe(gebruikersAccount);
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
@@ -62,7 +67,16 @@ public class DataSeeder {
 
         // Persoon initialization
         Vluchteling joe = new Vluchteling("Joe", ghana);
+        Account gebruikersaccount1 = new Account("joe");
+        voegGebruikerToe(gebruikersaccount1);
+        joe.setAccount(gebruikersaccount1);
+        gebruikersaccount1.setPersoon(joe);
+
         Vluchteling jane = new Vluchteling("Jane", afghanistan);
+        Account gebruikersAccount2 = new Account("jane");
+        voegGebruikerToe(gebruikersAccount2);
+        jane.setAccount(gebruikersAccount2);
+        gebruikersAccount2.setPersoon(jane);
 
         //Gemeente initialization
         Gemeente denHaag = new Gemeente("Den Haag", 562000);
@@ -155,6 +169,7 @@ public class DataSeeder {
         MenuActie overplaatsen = new ActieOverplaatsen("Overplaatsen naar een ander verblijf");
 
         mainMenu2.menu.voegKeuzeToe(subMenu6);
+        mainMenu2.menu.voegKeuzeToe(logout);
 
         subMenu6.menu.voegKeuzeToe(mainMenu2);
         subMenu6.menu.voegKeuzeToe(overplaatsen);
@@ -163,7 +178,19 @@ public class DataSeeder {
 
 
         //Gebruiker MenuInitialization
+        MenuScherm mainMenu3 = new MenuScherm("Main Menu");
 
+        MenuActie profiel = new ActieProfiel("Profiel");
+        MenuActie dossierInzien = new ActieDossierInzien("Dossier bekijken");
+        MenuActie adresRegistreren = new ActieAdresRegistreren("Adres Registreren");
+
+        mainMenu3.menu.voegKeuzeToe(profiel);
+        mainMenu3.menu.voegKeuzeToe(dossierInzien);
+        mainMenu3.menu.voegKeuzeToe(adresRegistreren);
+        mainMenu3.menu.voegKeuzeToe(logout);
+
+        gebruikersaccount1.setMenu(mainMenu3);
+        gebruikersAccount2.setMenu(mainMenu3);
     }
 
     private DataSeeder() {

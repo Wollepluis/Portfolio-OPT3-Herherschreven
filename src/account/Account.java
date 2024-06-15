@@ -1,11 +1,21 @@
 package account;
 
+import coaData.Persoon;
 import menu.MenuScherm;
 
 public class Account {
 
     private String gebruikersnaam;
     private MenuScherm menu;
+    Persoon persoon;
+
+    public Persoon getPersoon() {
+        return persoon;
+    }
+
+    public void setPersoon(Persoon persoon) {
+        this.persoon = persoon;
+    }
 
     public String getGebruikersnaam() {
         return this.gebruikersnaam;

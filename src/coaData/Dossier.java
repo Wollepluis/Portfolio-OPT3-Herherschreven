@@ -92,6 +92,7 @@ public class Dossier {
                 System.out.println("\n" + vluchteling.getNaam() + " is niet toegelaten tot de nederlandse samenleving.");
             }
         }
+        System.out.println("\n==========\n");
     }
 
     public String jaNee (boolean x) {
