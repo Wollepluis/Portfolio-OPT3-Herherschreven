@@ -7,6 +7,7 @@ import menu.*;
 import menu.acties.ActieLogout;
 import menu.acties.adminActies.*;
 import enums.*;
+import menu.acties.coaActies.ActieOverplaatsen;
 
 import java.util.ArrayList;
 
@@ -59,11 +60,9 @@ public class DataSeeder {
         landManager.alleLanden.add(ghana);
         landManager.alleLanden.add(afghanistan);
 
-
         // Persoon initialization
-        Vluchteling markWilbrink = new Vluchteling("Mark Wilbrink", ghana);
-
-        markWilbrink.setAccount(gebruikersAccount);
+        Vluchteling joe = new Vluchteling("Joe", ghana);
+        Vluchteling jane = new Vluchteling("Jane", afghanistan);
 
         //Gemeente initialization
         Gemeente denHaag = new Gemeente("Den Haag", 562000);
@@ -86,11 +85,16 @@ public class DataSeeder {
         verblijfplaatsManager.alleAZCs.add(azc1);
         verblijfplaatsManager.alleAZCs.add(azc2);
 
-        azc1.voegVluchtelingToe(markWilbrink);
-        persoonManager.alleVluchtelingen.add(markWilbrink);
+        azc1.voegVluchtelingToe(joe);
+        persoonManager.alleVluchtelingen.add(joe);
+        joe.setVerblijfplaats(azc1);
+
+        azc2.voegVluchtelingToe(jane);
+        persoonManager.alleVluchtelingen.add(jane);
+        jane.setVerblijfplaats(azc2);
 
         //Woning initialization
-        Woning woning1 = new Woning(adres3, markWilbrink);
+        Woning woning1 = new Woning(adres3, joe);
         verblijfplaatsManager.alleWoningen.add(woning1);
 
         //Admin Menu initialization
@@ -148,9 +152,12 @@ public class DataSeeder {
         MenuScherm mainMenu2 = new MenuScherm("Main Menu");
         MenuScherm subMenu6 = new MenuScherm("Beheer Vluchteling", PreMenuType.NAAM);
 
+        MenuActie overplaatsen = new ActieOverplaatsen("Overplaatsen naar een ander verblijf");
+
         mainMenu2.menu.voegKeuzeToe(subMenu6);
 
         subMenu6.menu.voegKeuzeToe(mainMenu2);
+        subMenu6.menu.voegKeuzeToe(overplaatsen);
 
         coaAccount.setMenu(mainMenu2);
 

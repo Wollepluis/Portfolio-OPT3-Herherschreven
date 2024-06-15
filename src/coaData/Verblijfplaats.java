@@ -7,6 +7,7 @@ public abstract class Verblijfplaats {
     private Adres adres;
     PersoonManager persoonManager = PersoonManager.getInstance();
 
+
     public Adres getAdres() {
         return this.adres;
     }
@@ -19,16 +20,15 @@ public abstract class Verblijfplaats {
         setAdres(adres);
     }
 
-    public void setNieuwVerblijfplaats(Verblijfplaats verblijfplaats) {
-        persoonManager.actiefPersoon.setVerblijfplaats(verblijfplaats);
-    }
-    public void verhuis(Persoon persoon, Verblijfplaats nieuwVerblijfplaats) {
-        vertrekVerblijfplaats(persoon);
-        setNieuwVerblijfplaats(nieuwVerblijfplaats);
-        zetInNieuwVerblijfplaats(persoon, nieuwVerblijfplaats);
+    public void verhuis() {
+        vertrekVerblijfplaats();
+        registreerWoning();
+        zetInNieuwVerblijfplaats();
     }
 
-    public abstract void vertrekVerblijfplaats(Persoon persoon);
-    public abstract void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats);
+    public abstract void vertrekVerblijfplaats();
+
+    public abstract void registreerWoning();
+    public abstract void zetInNieuwVerblijfplaats();
 
 }

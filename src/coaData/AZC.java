@@ -44,7 +44,7 @@ public class AZC extends Verblijfplaats {
     }
 
     @Override
-    public void vertrekVerblijfplaats(Persoon persoon) {
+    public void vertrekVerblijfplaats() {
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
         PersoonManager persoonManager = PersoonManager.getInstance();
 
@@ -54,10 +54,14 @@ public class AZC extends Verblijfplaats {
     }
 
     @Override
-    public void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats) {
+    public void registreerWoning(){}
+
+    @Override
+    public void zetInNieuwVerblijfplaats() {
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
         PersoonManager persoonManager = PersoonManager.getInstance();
 
-
+        persoonManager.actiefPersoon.setVerblijfplaats(verblijfplaatsManager.actiefAZC);
+        verblijfplaatsManager.actiefAZC.gevestigdeVluchtelingen.add((Vluchteling) persoonManager.actiefPersoon);
     }
 }

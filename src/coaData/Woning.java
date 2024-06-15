@@ -18,12 +18,17 @@ public class Woning extends Verblijfplaats {
     }
 
     @Override
-    public void vertrekVerblijfplaats(Persoon persoon) {
+    public void vertrekVerblijfplaats() {
 
     }
 
     @Override
-    public void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats) {
+    public void registreerWoning() {
+
+    }
+
+    @Override
+    public void zetInNieuwVerblijfplaats() {
 
     }
 }

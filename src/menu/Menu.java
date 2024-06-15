@@ -46,7 +46,7 @@ public class Menu {
         }
     }
 
-    private void gemeentePreMenu() {
+    public void gemeentePreMenu() {
         GemeenteManager gemeenteManager = GemeenteManager.getInstance();
 
         int keuze;
@@ -67,7 +67,7 @@ public class Menu {
         }
     }
 
-    private void azcPreMenu() {
+    public void azcPreMenu() {
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
         int keuze;
@@ -93,7 +93,7 @@ public class Menu {
         }
     }
 
-    private void woningPreMenu() {
+    public void woningPreMenu() {
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
         int keuze;

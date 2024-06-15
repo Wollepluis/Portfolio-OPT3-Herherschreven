@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-06-12T23:13:47.983Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="iAno2AMAG7Un1wOeNEo4" version="24.5.3" type="device" pages="2">
+<mxfile host="Electron" modified="2024-06-15T15:37:52.774Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="O3X9UzYAGx7leBVmUa5q" version="24.5.3" type="device" pages="2">
   <diagram name="Ontwerp1" id="k2Y9Q6WlMhEknnV1o6Vg">
     <mxGraphModel dx="2599" dy="1652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1291,7 +1291,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ktV6CKI7x0Gj4C6Fmf0G" name="VerbeterdOntwerp">
-    <mxGraphModel dx="6486" dy="2392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3029" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2024,7 +2024,7 @@
           <mxGeometry y="142" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="gvMif98sLffiDWmaD8gA-1" value="Menu" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="-1620" y="1737" width="320" height="320" as="geometry" />
+          <mxGeometry x="-1620" y="1737" width="320" height="346" as="geometry" />
         </mxCell>
         <mxCell id="gvMif98sLffiDWmaD8gA-17" value="- menuScherm : MenuScherm" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="26" width="320" height="26" as="geometry" />
@@ -2041,26 +2041,29 @@
         <mxCell id="gvMif98sLffiDWmaD8gA-19" value="+ toonMenukeuze()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="112" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-20" value="+ vraagNaarLand()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="gvMif98sLffiDWmaD8gA-20" value="+ landPreMenu()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="138" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-23" value="+ vraagNaarGemeente()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="gvMif98sLffiDWmaD8gA-23" value="+ gemeentePreMenu()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="164" width="320" height="26" as="geometry" />
         </mxCell>
         <mxCell id="gvMif98sLffiDWmaD8gA-22" value="+ vraagNaarVluchteling()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="190" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-21" value="+ vraagNaarVerblijfplaats()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="gvMif98sLffiDWmaD8gA-21" value="+ azcPreMenu&lt;span style=&quot;background-color: initial;&quot;&gt;()&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="216" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-24" value="+ toonPreMenu(menuType : MenuType)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="XOeCm6APvSiEvmHsaQHg-1" value="+ woningPreMenu&lt;span style=&quot;background-color: initial;&quot;&gt;()&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gvMif98sLffiDWmaD8gA-1">
           <mxGeometry y="242" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-25" value="+ toonMenu()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="gvMif98sLffiDWmaD8gA-24" value="+ toonPreMenu(menuType : MenuType)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="268" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="gvMif98sLffiDWmaD8gA-26" value="+ voegKeuzeToe(menuKeuze : Menukeuze)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+        <mxCell id="gvMif98sLffiDWmaD8gA-25" value="+ toonMenu()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
           <mxGeometry y="294" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="gvMif98sLffiDWmaD8gA-26" value="+ voegKeuzeToe(menuKeuze : Menukeuze)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gvMif98sLffiDWmaD8gA-1" vertex="1">
+          <mxGeometry y="320" width="320" height="26" as="geometry" />
         </mxCell>
         <mxCell id="gvMif98sLffiDWmaD8gA-5" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;lt;&amp;lt;Abstract&amp;gt;&amp;gt;&lt;/span&gt;&lt;div&gt;Menukeuze&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-1144" y="1821" width="170" height="152" as="geometry" />
