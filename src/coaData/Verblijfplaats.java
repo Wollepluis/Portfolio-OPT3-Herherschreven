@@ -25,10 +25,10 @@ public abstract class Verblijfplaats {
     public void verhuis(Persoon persoon, Verblijfplaats nieuwVerblijfplaats) {
         vertrekVerblijfplaats(persoon);
         setNieuwVerblijfplaats(nieuwVerblijfplaats);
-        zetInNieuwVerblijfplaats(persoon);
+        zetInNieuwVerblijfplaats(persoon, nieuwVerblijfplaats);
     }
 
     public abstract void vertrekVerblijfplaats(Persoon persoon);
-    public abstract void zetInNieuwVerblijfplaats(Persoon persoon);
+    public abstract void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats);
 
 }

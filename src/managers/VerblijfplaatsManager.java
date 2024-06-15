@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class VerblijfplaatsManager {
 
     private static VerblijfplaatsManager instance;
-    public final ArrayList<Verblijfplaats> alleVerblijfplaatsen;
+    public final ArrayList<AZC> alleAZCs;
+    public final ArrayList<Woning> alleWoningen;
     public AZC actiefAZC;
     public Woning actiefWoning;
 
@@ -35,16 +36,28 @@ public class VerblijfplaatsManager {
 
 
     private VerblijfplaatsManager() {
-        this.alleVerblijfplaatsen = new ArrayList<>();
+        this.alleAZCs = new ArrayList<>();
+        this.alleWoningen = new ArrayList<>();
         this.setActiefAZC(null);
     }
 
-    public Verblijfplaats getVerblijfplaats(String postcode, String straatnaam, int huisnummer) {
+    public AZC getAZC(String postcode, String straatnaam, int huisnummer) {
 
-        for (Verblijfplaats v : alleVerblijfplaatsen) {
+        for (AZC azc : alleAZCs) {
 
-            if (v.getAdres().getPostcode().equalsIgnoreCase(postcode) && v.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && v.getAdres().getHuisnummer() == huisnummer) {
-                return v;
+            if (azc.getAdres().getPostcode().equalsIgnoreCase(postcode) && azc.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && azc.getAdres().getHuisnummer() == huisnummer) {
+                return azc;
+            }
+        }
+        return null;
+    }
+
+    public Woning getWoning(String postcode, String straatnaam, int huisnummer) {
+
+        for (Woning woning : alleWoningen) {
+
+            if (woning.getAdres().getPostcode().equalsIgnoreCase(postcode) && woning.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && woning.getAdres().getHuisnummer() == huisnummer) {
+                return woning;
             }
         }
         return null;

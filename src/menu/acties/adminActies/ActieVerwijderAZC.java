@@ -1,9 +1,7 @@
 package menu.acties.adminActies;
 
 import coaData.AZC;
-import coaData.Adres;
 import coaData.Gemeente;
-import coaData.Verblijfplaats;
 import managers.GemeenteManager;
 import managers.VerblijfplaatsManager;
 import menu.MenuActie;
@@ -26,7 +24,7 @@ public class ActieVerwijderAZC extends MenuActie {
             if (azc.getGevestigdeVluchtelingen().isEmpty()) {
 
                 gemeente.getLocaleAZCs().remove(verblijfplaatsManager.actiefAZC);
-                verblijfplaatsManager.alleVerblijfplaatsen.remove(verblijfplaatsManager.actiefAZC);
+                verblijfplaatsManager.alleAZCs.remove(verblijfplaatsManager.actiefAZC);
 
                 System.out.println("AZC verwijderd.");
             }

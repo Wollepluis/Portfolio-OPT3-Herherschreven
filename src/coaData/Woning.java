@@ -23,7 +23,7 @@ public class Woning extends Verblijfplaats {
     }
 
     @Override
-    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+    public void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats) {
 
     }
 }

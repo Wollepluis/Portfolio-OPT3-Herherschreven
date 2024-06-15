@@ -4,7 +4,6 @@ import coaData.AZC;
 import coaData.Adres;
 import coaData.Gemeente;
 import managers.GemeenteManager;
-import coaData.Verblijfplaats;
 import managers.VerblijfplaatsManager;
 import menu.MenuActie;
 import scanner.MyScanner;
@@ -37,7 +36,7 @@ public class ActieVoegAZCToe extends MenuActie {
                 Adres nieuwAdres = new Adres(gemeente, postcode, straatnaam, huisnummer);
                 AZC nieuwAZC = new AZC(nieuwAdres, aantalPlaatsen);
 
-                VerblijfplaatsManager.getInstance().alleVerblijfplaatsen.add(nieuwAZC);
+                VerblijfplaatsManager.getInstance().alleAZCs.add(nieuwAZC);
                 gemeente.getLocaleAZCs().add(nieuwAZC);
 
                 System.out.println("AZC toegevoegd.");

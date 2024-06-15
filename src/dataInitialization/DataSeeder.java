@@ -53,15 +53,17 @@ public class DataSeeder {
         voegGebruikerToe(coaAccount);
         voegGebruikerToe(adminAccount);
 
-        // Persoon initialization
-        Persoon markWilbrink = new Persoon("Mark Wilbrink");
-        markWilbrink.setAccount(gebruikersAccount);
-
         //Land initialization
         Land ghana = new Land("Ghana", false);
         Land afghanistan = new Land("Afghanistan", true);
         landManager.alleLanden.add(ghana);
         landManager.alleLanden.add(afghanistan);
+
+
+        // Persoon initialization
+        Vluchteling markWilbrink = new Vluchteling("Mark Wilbrink", ghana);
+
+        markWilbrink.setAccount(gebruikersAccount);
 
         //Gemeente initialization
         Gemeente denHaag = new Gemeente("Den Haag", 562000);
@@ -81,12 +83,15 @@ public class DataSeeder {
         AZC azc2 = new AZC(adres2, 600);
         amsterdam.getLocaleAZCs().add(azc1);
         denHaag.getLocaleAZCs().add(azc2);
-        verblijfplaatsManager.alleVerblijfplaatsen.add(azc1);
-        verblijfplaatsManager.alleVerblijfplaatsen.add(azc2);
+        verblijfplaatsManager.alleAZCs.add(azc1);
+        verblijfplaatsManager.alleAZCs.add(azc2);
+
+        azc1.voegVluchtelingToe(markWilbrink);
+        persoonManager.alleVluchtelingen.add(markWilbrink);
 
         //Woning initialization
         Woning woning1 = new Woning(adres3, markWilbrink);
-        verblijfplaatsManager.alleVerblijfplaatsen.add(woning1);
+        verblijfplaatsManager.alleWoningen.add(woning1);
 
         //Admin Menu initialization
         MenuScherm mainMenu1 = new MenuScherm("Main menu");
@@ -140,6 +145,14 @@ public class DataSeeder {
         adminAccount.setMenu(mainMenu1);
 
         //COA Menu Initialization
+        MenuScherm mainMenu2 = new MenuScherm("Main Menu");
+        MenuScherm subMenu6 = new MenuScherm("Beheer Vluchteling", PreMenuType.NAAM);
+
+        mainMenu2.menu.voegKeuzeToe(subMenu6);
+
+        subMenu6.menu.voegKeuzeToe(mainMenu2);
+
+        coaAccount.setMenu(mainMenu2);
 
 
         //Gebruiker MenuInitialization

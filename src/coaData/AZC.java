@@ -2,6 +2,8 @@ package coaData;
 
 import events.EventHandler;
 import events.VluchtelingEventArgs;
+import managers.PersoonManager;
+import managers.VerblijfplaatsManager;
 
 import java.util.ArrayList;
 
@@ -43,11 +45,19 @@ public class AZC extends Verblijfplaats {
 
     @Override
     public void vertrekVerblijfplaats(Persoon persoon) {
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+        PersoonManager persoonManager = PersoonManager.getInstance();
 
+        for (AZC azc: verblijfplaatsManager.alleAZCs) {
+            azc.gevestigdeVluchtelingen.remove(persoonManager.actiefPersoon);
+        }
     }
 
     @Override
-    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+    public void zetInNieuwVerblijfplaats(Persoon persoon, Verblijfplaats verblijfplaats) {
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+        PersoonManager persoonManager = PersoonManager.getInstance();
+
 
     }
 }

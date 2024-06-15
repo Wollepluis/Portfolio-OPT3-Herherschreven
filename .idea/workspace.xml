@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Workspace" />
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="uml">
+      <change afterPath="$PROJECT_DIR$/src/menu/acties/coaActies/ActieOverplaatsen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/UML Verbetert.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML Verbetert.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/AZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/AZC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coaData/Woning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Woning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/VerblijfplaatsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/VerblijfplaatsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVerwijderAZC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/acties/adminActies/ActieVoegAZCToe.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -363,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718316218450</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="uml">
+      <option name="closed" value="true" />
+      <created>1718316274165</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1718316274165</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,7 +398,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Enums 'RechetrUitspraak' en 'EigenWoning aangemaakt.'&#10;&#10;Class Account (leeg) aangemaakt.&#10;&#10;Test Actie1 en Actie2 aangemaakt.&#10;&#10;Main aangemaakt met test menu.&#10;&#10;MyScanner aangepast -&gt; extra nextInt() met failsafe." />
     <MESSAGE value="MENU WERKT EINDELIJK!!!!!!!!!&#10;&#10;Coa en Admin account toegevoegd&#10;&#10;DataSeeder en Beveiliging Toegevoegd&#10;&#10;Programma kan (Technisch gezien) gerund worden" />
     <MESSAGE value="Imports uit Main gehaald" />
     <MESSAGE value="Alle classes in package coaData aangemaakt" />
@@ -403,6 +422,7 @@
     <MESSAGE value="Nieuw UML" />
     <MESSAGE value="Template method pattern&#10;&#10;PersoonManager" />
     <MESSAGE value="Workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+    <MESSAGE value="uml" />
+    <option name="LAST_COMMIT_MESSAGE" value="uml" />
   </component>
 </project>

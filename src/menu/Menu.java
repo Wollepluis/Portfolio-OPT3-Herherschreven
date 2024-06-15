@@ -11,11 +11,7 @@ public class Menu {
 
     private final MenuScherm menuScherm;
     private final ArrayList<Menukeuze> menukeuzes = new ArrayList<>();
-
-    LandManager landManager = LandManager.getInstance();
     PersoonManager persoonManager = PersoonManager.getInstance();
-    GemeenteManager gemeenteManager = GemeenteManager.getInstance();
-    VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
 
     public Menu(MenuScherm menuScherm) {
         this.menuScherm = menuScherm;
@@ -29,31 +25,116 @@ public class Menu {
         }
     }
 
-    public void vraagNaarLand() {
+    public void landPreMenu() {
+        LandManager landManager = LandManager.getInstance();
 
-        while (true) {
-            System.out.print("Land: ");
-            Land land = landManager.getLand(MyScanner.nextLine());
+        int keuze;
+        boolean keuzeGemaakt = false;
 
-            if (land != null) {
-                landManager.setActiefLand(land);
-                break;
+        while (!keuzeGemaakt) {
+            int index = 0;
+            for (Land land : landManager.alleLanden) {
+                System.out.println("[" + index++ + "]" + land.getNaam());
             }
-            System.out.println("Dit land staat niet in het systeem.");
+
+            System.out.print("\nKeuze: ");
+
+            keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
+
+            LandManager.getInstance().setActiefLand(landManager.alleLanden.get(keuze));
+            break;
         }
     }
 
-    public void vraagNaarGemeente() {
+    private void gemeentePreMenu() {
+        GemeenteManager gemeenteManager = GemeenteManager.getInstance();
 
-        while (true) {
-            System.out.print("Gemeente: ");
-            Gemeente gemeente = gemeenteManager.getGemeente(MyScanner.nextLine());
+        int keuze;
+        boolean keuzeGemaakt = false;
 
-            if (gemeente != null) {
-                gemeenteManager.setActiefGemeente(gemeente);
-                break;
+        while (!keuzeGemaakt) {
+            int index = 0;
+            for (Gemeente gemeente : gemeenteManager.alleGemeentes) {
+                System.out.println("[" + index++ + "]" + gemeente.getNaam());
             }
-            System.out.println("Deze gemeente staat niet in het systeem.");
+
+            System.out.print("\nKeuze: ");
+
+            keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
+
+            GemeenteManager.getInstance().setActiefGemeente(gemeenteManager.alleGemeentes.get(keuze));
+            break;
+        }
+    }
+
+    private void azcPreMenu() {
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+
+        int keuze;
+        boolean keuzeGemaakt = false;
+
+        while (!keuzeGemaakt) {
+            int index = 0;
+            for (Verblijfplaats verblijfplaats : verblijfplaatsManager.alleAZCs) {
+
+                index++;
+                String gemeente = verblijfplaats.getAdres().getGemeente().getNaam();
+                String straatnaam = verblijfplaats.getAdres().getStraatnaam();
+                String postcode = verblijfplaats.getAdres().getPostcode();
+                int huisnummer = verblijfplaats.getAdres().getHuisnummer();
+                System.out.printf("[%d] %s: %s %d (%s)", index, gemeente, straatnaam, huisnummer, postcode);
+            }
+
+            System.out.print("\nKeuze:");
+            keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
+
+            VerblijfplaatsManager.getInstance().setActiefAZC(verblijfplaatsManager.alleAZCs.get(keuze));
+            break;
+        }
+    }
+
+    private void woningPreMenu() {
+        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
+
+        int keuze;
+        boolean keuzeGemaakt = false;
+
+        while (!keuzeGemaakt) {
+            int index = 0;
+            for (Verblijfplaats verblijfplaats : verblijfplaatsManager.alleWoningen) {
+                index++;
+                String gemeente = verblijfplaats.getAdres().getGemeente().getNaam();
+                String straatnaam = verblijfplaats.getAdres().getStraatnaam();
+                String postcode = verblijfplaats.getAdres().getPostcode();
+                int huisnummer = verblijfplaats.getAdres().getHuisnummer();
+                System.out.printf("[%d] %s: %s %d (%s)", index, gemeente, straatnaam, huisnummer, postcode);
+            }
+
+            System.out.print("\nKeuze:");
+            keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
+
+            VerblijfplaatsManager.getInstance().setActiefWoning(verblijfplaatsManager.alleWoningen.get(keuze));
+            break;
+        }
+    }
+
+    public void toonPreMenu(PreMenuType preMenuType) {
+        switch (preMenuType) {
+            case LAND:
+                landPreMenu();
+                break;
+            case GEMEENTE:
+                gemeentePreMenu();
+                break;
+            case NAAM:
+                vraagNaarVluchteling();
+                break;
+            case AZC:
+                azcPreMenu();
+                break;
+            case WONING:
+                woningPreMenu();
+                break;
         }
     }
 
@@ -71,49 +152,6 @@ public class Menu {
         }
     }
 
-    public void vraagNaarVerblijfplaats() {
-
-        while (true) {
-            System.out.println("Geef adres op.");
-            System.out.print("Postcode: ");
-            String postcode = MyScanner.nextLine();
-            System.out.print("Straatnaam: ");
-            String straatnaam = MyScanner.nextLine();
-            System.out.print("Huisnummer: ");
-            int huisnummer = MyScanner.nextInt(0);
-
-            Verblijfplaats verblijfplaats = verblijfplaatsManager.getVerblijfplaats(postcode, straatnaam, huisnummer);
-
-            if (verblijfplaats instanceof AZC) {
-                verblijfplaatsManager.setActiefAZC((AZC) verblijfplaats);
-                break;
-            }
-            else if (verblijfplaats instanceof Woning) {
-                verblijfplaatsManager.setActiefWoning((Woning) verblijfplaats);
-                break;
-            }
-            System.out.println("Dit adres staat niet in het systeem.");
-        }
-    }
-
-    public void toonPreMenu(PreMenuType preMenuType) {
-
-        switch (preMenuType) {
-            case LAND:
-                vraagNaarLand();
-                break;
-            case GEMEENTE:
-                vraagNaarGemeente();
-                break;
-            case NAAM:
-                vraagNaarVluchteling();
-                break;
-            case AZC, WONING:
-                vraagNaarVerblijfplaats();
-                break;
-        }
-    }
-
     public void toonMenu() {
 
         int keuze;
@@ -123,8 +161,7 @@ public class Menu {
 
             toonMenukeuze();
 
-            System.out.println();
-            System.out.print("Keuze: ");
+            System.out.print("\nKeuze: ");
 
             keuze = MyScanner.nextInt(0, menukeuzes.size() - 1);
 
