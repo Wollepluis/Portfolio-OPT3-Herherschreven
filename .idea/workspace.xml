@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="VALUE menu geïmplementeerd&#10;&#10;nog niet initializedf">
+    <list default="true" id="88e97d3d-fcc8-48ca-8372-9aeb3681190d" name="Changes" comment="Initializatie verbeterd + een aantal Manager classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/TestConditionCoverage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/AZC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/AZC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Gemeente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Gemeente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Verblijfplaats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coaData/Woning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coaData/Woning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentatie/UML OPT3.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataInitialization/DataSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/managers/PersoonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/PersoonManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/managers/VerblijfplaatsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/VerblijfplaatsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propGUI"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -434,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718801092833</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Initializatie verbeterd + een aantal Manager classes">
+      <option name="closed" value="true" />
+      <created>1718809824706</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718809824706</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="." />
     <MESSAGE value="2 Acties voor admin toegevoegd&#10;&#10;static arraylists toegevoegd aan gemeente en land" />
     <MESSAGE value="ActieLogout toegevoegd" />
     <MESSAGE value="Enum PreMenuType toegevoegd&#10;&#10;Menus geupdate en acties toegevoegd&#10;&#10;actiefstatus in land, gemeente, vluchteling en Adres toegevoegd" />
@@ -474,6 +474,7 @@
     <MESSAGE value="Acount acties aangemaakr" />
     <MESSAGE value="UML Update" />
     <MESSAGE value="VALUE menu geïmplementeerd&#10;&#10;nog niet initializedf" />
-    <option name="LAST_COMMIT_MESSAGE" value="VALUE menu geïmplementeerd&#10;&#10;nog niet initializedf" />
+    <MESSAGE value="Initializatie verbeterd + een aantal Manager classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initializatie verbeterd + een aantal Manager classes" />
   </component>
 </project>

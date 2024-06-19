@@ -7,6 +7,8 @@ import managers.GemeenteManager;
 import managers.LandManager;
 import managers.PersoonManager;
 import managers.VerblijfplaatsManager;
+import menu.Menu;
+import menu.SubMenu;
 
 import java.util.ArrayList;
 
@@ -14,6 +16,7 @@ public class DataSeeder {
 
     private static DataSeeder instance = null;
     private final ArrayList<Account> accounts;
+    public ArrayList<Menu> alleMenus;
 
     public static DataSeeder getInstance() {
 
@@ -25,6 +28,7 @@ public class DataSeeder {
 
     private DataSeeder() {
         accounts = new ArrayList<>();
+        alleMenus = new ArrayList<>();
         initialize();
     }
 
@@ -112,5 +116,17 @@ public class DataSeeder {
         voegGebruikerToe(adminAccount, xander);
 
         //adminmenu
+        Menu adminMainMenu = new Menu("Main Menu");
+        SubMenu landAdministratie = new SubMenu("Land Administratie");
+        SubMenu wijzigLand = new SubMenu("Wijzig Land");
+        SubMenu gemeenteAdministratie = new SubMenu("Gemeente Administratie");
+        SubMenu wijzigGemeente = new SubMenu("Wijzig gemeente");
+        SubMenu wijzigAZCs = new SubMenu("Beheer AZC");
+        alleMenus.add(adminMainMenu);
+        alleMenus.add(landAdministratie);
+        alleMenus.add(wijzigLand);
+        alleMenus.add(gemeenteAdministratie);
+        alleMenus.add(wijzigGemeente);
+        alleMenus.add(wijzigAZCs);
     }
 }
