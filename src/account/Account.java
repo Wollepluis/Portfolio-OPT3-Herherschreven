@@ -1,7 +1,6 @@
 package account;
 
 import coaData.Persoon;
-import menu.MenuScherm;
 
 public class Account {
 

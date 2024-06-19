@@ -3,12 +3,9 @@ package menu.acties.adminActies;
 import coaData.AZC;
 import coaData.Gemeente;
 import managers.GemeenteManager;
-import menu.MenuActie;
+import menu.IActie;
 
-public class ActieRapportageOpvragen extends MenuActie {
-    public ActieRapportageOpvragen(String naam) {
-        super(naam);
-    }
+public class ActieRapportageOpvragen implements IActie {
 
     @Override
     public void execute() {

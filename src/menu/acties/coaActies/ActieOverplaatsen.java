@@ -1,13 +1,9 @@
 package menu.acties.coaActies;
 
 import managers.VerblijfplaatsManager;
-import menu.MenuActie;
+import menu.IActie;
 
-public class ActieOverplaatsen extends MenuActie {
-
-    public ActieOverplaatsen(String naam) {
-        super(naam);
-    }
+public class ActieOverplaatsen implements IActie {
 
     @Override
     public void execute() {

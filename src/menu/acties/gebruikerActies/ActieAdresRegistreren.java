@@ -1,11 +1,8 @@
 package menu.acties.gebruikerActies;
 
-import menu.MenuActie;
+import menu.IActie;
 
-public class ActieAdresRegistreren extends MenuActie {
-    public ActieAdresRegistreren(String naam) {
-        super(naam);
-    }
+public class ActieAdresRegistreren implements IActie {
 
     @Override
     public void execute() {

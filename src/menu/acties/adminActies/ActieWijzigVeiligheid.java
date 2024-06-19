@@ -2,13 +2,10 @@ package menu.acties.adminActies;
 
 import coaData.Land;
 import managers.LandManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.ClosedQuestion;
 
-public class ActieWijzigVeiligheid extends MenuActie {
-    public ActieWijzigVeiligheid(String naam) {
-        super(naam);
-    }
+public class ActieWijzigVeiligheid implements IActie {
 
     @Override
     public void execute() {

@@ -3,12 +3,9 @@ package menu.acties.gebruikerActies;
 import account.Beveiliging;
 import coaData.Vluchteling;
 import managers.PersoonManager;
-import menu.MenuActie;
+import menu.IActie;
 
-public class ActieDossierInzien extends MenuActie {
-    public ActieDossierInzien(String naam) {
-        super(naam);
-    }
+public class ActieDossierInzien implements IActie {
 
     @Override
     public void execute() {

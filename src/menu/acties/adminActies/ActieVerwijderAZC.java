@@ -4,13 +4,10 @@ import coaData.AZC;
 import coaData.Gemeente;
 import managers.GemeenteManager;
 import managers.VerblijfplaatsManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.ClosedQuestion;
 
-public class ActieVerwijderAZC extends MenuActie {
-    public ActieVerwijderAZC(String naam) {
-        super(naam);
-    }
+public class ActieVerwijderAZC implements IActie {
 
     @Override
     public void execute() {

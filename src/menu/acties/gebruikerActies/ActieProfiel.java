@@ -1,11 +1,8 @@
 package menu.acties.gebruikerActies;
 
-import menu.MenuActie;
+import menu.IActie;
 
-public class ActieProfiel extends MenuActie {
-    public ActieProfiel(String naam) {
-        super(naam);
-    }
+public class ActieProfiel implements IActie {
 
     @Override
     public void execute() {

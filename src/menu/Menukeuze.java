@@ -1,24 +1,29 @@
 package menu;
 
-import enums.PreMenuType;
+public class Menukeuze {
 
-public abstract class Menukeuze {
+    private String titel;
+    private IActie actie;
 
-    private final String naam;
-
-    public String getNaam() {
-        return naam;
+    public String getTitel() {
+        return this.titel;
     }
 
-    public Menukeuze(String naam) {
-        this.naam = naam;
+    public void setTitel(String titel) {
+        this.titel = titel;
     }
 
-    public void printTitel() {
-        System.out.print("=== " + naam);
+    public IActie getActie() {
+        return this.actie;
     }
 
-    public void execute() {
-        printTitel();
+    public void setActie(IActie actie) {
+        this.actie = actie;
+    }
+
+    public Menukeuze(String titel, IActie actie) {
+        this.setTitel(titel);
+        this.setActie(actie);
     }
 }
+

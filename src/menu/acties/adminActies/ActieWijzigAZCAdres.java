@@ -1,16 +1,11 @@
 package menu.acties.adminActies;
 
 import coaData.AZC;
-import coaData.Adres;
-import coaData.Verblijfplaats;
 import managers.VerblijfplaatsManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.MyScanner;
 
-public class ActieWijzigAZCAdres extends MenuActie {
-    public ActieWijzigAZCAdres(String naam) {
-        super(naam);
-    }
+public class ActieWijzigAZCAdres implements IActie {
 
     @Override
     public void execute() {

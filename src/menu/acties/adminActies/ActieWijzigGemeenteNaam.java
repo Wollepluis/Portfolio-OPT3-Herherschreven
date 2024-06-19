@@ -2,13 +2,10 @@ package menu.acties.adminActies;
 
 import coaData.Gemeente;
 import managers.GemeenteManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.MyScanner;
 
-public class ActieWijzigGemeenteNaam extends MenuActie {
-    public ActieWijzigGemeenteNaam(String naam) {
-        super(naam);
-    }
+public class ActieWijzigGemeenteNaam implements IActie {
 
     @Override
     public void execute() {

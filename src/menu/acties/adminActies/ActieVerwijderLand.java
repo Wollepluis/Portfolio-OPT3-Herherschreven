@@ -2,13 +2,10 @@ package menu.acties.adminActies;
 
 import coaData.Land;
 import managers.LandManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.ClosedQuestion;
 
-public class ActieVerwijderLand extends MenuActie {
-    public ActieVerwijderLand(String naam) {
-        super(naam);
-    }
+public class ActieVerwijderLand implements IActie {
 
     @Override
     public void execute() {

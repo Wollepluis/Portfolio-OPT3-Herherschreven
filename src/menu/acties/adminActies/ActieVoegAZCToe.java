@@ -5,13 +5,10 @@ import coaData.Adres;
 import coaData.Gemeente;
 import managers.GemeenteManager;
 import managers.VerblijfplaatsManager;
-import menu.MenuActie;
+import menu.IActie;
 import scanner.MyScanner;
 
-public class ActieVoegAZCToe extends MenuActie {
-    public ActieVoegAZCToe(String naam) {
-        super(naam);
-    }
+public class ActieVoegAZCToe implements IActie {
 
     @Override
     public void execute() {
