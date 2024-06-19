@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PersoonManager {
 
     private static PersoonManager instance;
-    public final ArrayList<Vluchteling> alleVluchtelingen;
+    public final ArrayList<Persoon> allePersonen;
     public Persoon actiefPersoon;
 
     public static PersoonManager getInstance() {
@@ -21,7 +21,7 @@ public class PersoonManager {
     }
 
     private PersoonManager() {
-        this.alleVluchtelingen = new ArrayList<>();
+        this.allePersonen = new ArrayList<>();
         this.setActiefPersoon(null);
     }
 
@@ -31,10 +31,13 @@ public class PersoonManager {
 
     public Vluchteling getVluchteling(String vluchtelingNaam) {
 
-        for (Vluchteling v : alleVluchtelingen) {
+        for (Persoon persoon : allePersonen) {
 
-            if (vluchtelingNaam.equalsIgnoreCase(v.getNaam())) {
-                return v;
+            if (persoon instanceof Vluchteling vluchteling) {
+
+                if (vluchtelingNaam.equalsIgnoreCase(vluchteling.getNaam())) {
+                    return vluchteling;
+                }
             }
         }
         return null;

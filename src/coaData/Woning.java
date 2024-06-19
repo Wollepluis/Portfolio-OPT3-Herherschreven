@@ -12,9 +12,8 @@ public class Woning extends Verblijfplaats {
         this.eigenaar = eigenaar;
     }
 
-    public Woning(Adres adres, Persoon eigenaar) {
+    public Woning(Adres adres) {
         super(adres);
-        setEigenaar(eigenaar);
     }
 
     @Override
@@ -28,7 +27,8 @@ public class Woning extends Verblijfplaats {
     }
 
     @Override
-    public void zetInNieuwVerblijfplaats() {
-
+    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+        setEigenaar(persoon);
+        persoon.setVerblijfplaats(this);
     }
 }

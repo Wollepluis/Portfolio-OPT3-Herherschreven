@@ -1,16 +1,16 @@
 package managers;
 
 import coaData.*;
+import events.VluchtelingEventArgs;
 
 import java.util.ArrayList;
 
 public class VerblijfplaatsManager {
 
     private static VerblijfplaatsManager instance;
-    public final ArrayList<AZC> alleAZCs;
-    public final ArrayList<Woning> alleWoningen;
-    public AZC actiefAZC;
-    public Woning actiefWoning;
+    public final ArrayList<Verblijfplaats> alleVerblijfplaatsen;
+    public Verblijfplaats actiefVerblijfplaats;
+
 
     public static VerblijfplaatsManager getInstance() {
 
@@ -21,45 +21,31 @@ public class VerblijfplaatsManager {
         return instance;
     }
 
-    public void setActiefAZC(AZC actiefAZC) {
-        this.actiefAZC = actiefAZC;
-    }
-
-    public void resetActiefVerblijfplaats() {
-        actiefAZC = null;
-        actiefWoning = null;
-    }
-
-    public void setActiefWoning(Woning actiefWoning) {
-        this.actiefWoning = actiefWoning;
-    }
-
-
     private VerblijfplaatsManager() {
-        this.alleAZCs = new ArrayList<>();
-        this.alleWoningen = new ArrayList<>();
-        this.setActiefAZC(null);
+        this.alleVerblijfplaatsen = new ArrayList<>();
     }
 
-    public AZC getAZC(String postcode, String straatnaam, int huisnummer) {
+    /**
+     * Wanneer er een AZC aangemaakt wordt, wordt deze direct toegevoegd aan de lijst met listeners.
+     * De listener waaraan een vluchteling wordt toegevoegd krijgt een melding.
+     */
+     public void voegVerblijfplaatsToe(Verblijfplaats verblijfplaats) {
 
-        for (AZC azc : alleAZCs) {
+        if (verblijfplaats instanceof AZC azc) {
+            verblijfplaats.getAdres().getGemeente().getLocaleAZCs().add(azc);
 
-            if (azc.getAdres().getPostcode().equalsIgnoreCase(postcode) && azc.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && azc.getAdres().getHuisnummer() == huisnummer) {
-                return azc;
-            }
+            azc.vluchtelingAdded.subscribe((sender, args) -> {
+
+                if (args instanceof VluchtelingEventArgs vluchtelingEventArgs) {
+                    System.out.println("Vluchteling toegevoegd: " + vluchtelingEventArgs.getVluchteling().getNaam());
+                }
+            });
         }
-        return null;
-    }
+        this.alleVerblijfplaatsen.add(verblijfplaats);
+     }
 
-    public Woning getWoning(String postcode, String straatnaam, int huisnummer) {
-
-        for (Woning woning : alleWoningen) {
-
-            if (woning.getAdres().getPostcode().equalsIgnoreCase(postcode) && woning.getAdres().getStraatnaam().equalsIgnoreCase(straatnaam) && woning.getAdres().getHuisnummer() == huisnummer) {
-                return woning;
-            }
-        }
-        return null;
-    }
+     public void verwijderAZC() {
+         actiefVerblijfplaats.getAdres().getGemeente().getLocaleAZCs().remove(actiefVerblijfplaats);
+         alleVerblijfplaatsen.remove(actiefVerblijfplaats);
+     }
 }

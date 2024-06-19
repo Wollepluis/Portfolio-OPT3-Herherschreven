@@ -1,11 +1,8 @@
 package coaData;
 
-import managers.PersoonManager;
-
 public abstract class Verblijfplaats {
 
     private Adres adres;
-    PersoonManager persoonManager = PersoonManager.getInstance();
 
 
     public Adres getAdres() {
@@ -20,15 +17,14 @@ public abstract class Verblijfplaats {
         setAdres(adres);
     }
 
-    public void verhuis() {
+    public void verhuis(Persoon persoon) {
         vertrekVerblijfplaats();
         registreerWoning();
-        zetInNieuwVerblijfplaats();
+        zetInNieuwVerblijfplaats(persoon);
     }
-
     public abstract void vertrekVerblijfplaats();
 
     public abstract void registreerWoning();
-    public abstract void zetInNieuwVerblijfplaats();
+    public abstract void zetInNieuwVerblijfplaats(Persoon persoon);
 
 }

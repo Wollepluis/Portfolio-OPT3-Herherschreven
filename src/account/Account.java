@@ -1,11 +1,12 @@
 package account;
 
 import coaData.Persoon;
+import menu.Menu;
 
 public class Account {
 
     private String gebruikersnaam;
-    private MenuScherm menu;
+    private Menu menu;
     Persoon persoon;
 
     public Persoon getPersoon() {
@@ -24,7 +25,7 @@ public class Account {
         this.gebruikersnaam = nieuwGebruikersnaam;
     }
 
-    public void setMenu(MenuScherm menu) {
+    public void setMenu(Menu menu) {
         this.menu = menu;
     }
 
@@ -37,6 +38,6 @@ public class Account {
     }
 
     public void startMenu() {
-        menu.execute();
+        menu.toonMenu();
     }
 }

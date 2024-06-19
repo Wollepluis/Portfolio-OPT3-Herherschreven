@@ -1,7 +1,5 @@
 package coaData;
 
-import events.VluchtelingEventArgs;
-
 import java.util.ArrayList;
 
 public class Gemeente {
@@ -46,25 +44,6 @@ public class Gemeente {
             }
         }
         return null;
-    }
-
-    /**
-     * Wanneer er een AZC aangemaakt wordt, wordt deze direct toegevoegd aan de lijst met listeners.
-     * De listener waaraan een vluchteling wordt toegevoegd krijgt een melding.
-     */
-    public void voegAZCToe(AZC azc) {
-        localeAZCs.add(azc);
-
-        azc.vluchtelingAdded.subscribe((sender, args) -> {
-
-            if (args instanceof VluchtelingEventArgs vluchtelingEventArgs) {
-                System.out.println("Vluchteling toegevoegd: " + vluchtelingEventArgs.getVluchteling().getNaam());
-            }
-        });
-    }
-
-    public void verwijderAZC(Adres adres) {
-       localeAZCs.removeIf(azc -> azc.getAdres().equals(adres));
     }
 
     public int getTotaalcapaciteit() {

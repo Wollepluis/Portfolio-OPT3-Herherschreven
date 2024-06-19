@@ -1,7 +1,6 @@
 package dataInitialization;
 
 import account.Account;
-import account.AdminAccount;
 import account.COAAccount;
 import coaData.*;
 import managers.GemeenteManager;
@@ -24,6 +23,11 @@ public class DataSeeder {
         return instance;
     }
 
+    private DataSeeder() {
+        accounts = new ArrayList<>();
+        initialize();
+    }
+
     public Account getAccount(String gebruikersnaam) {
 
         for (Account a : accounts) {
@@ -35,7 +39,9 @@ public class DataSeeder {
         return null;
     }
 
-    private void voegGebruikerToe(Account account) {
+    private void voegGebruikerToe(Account account, Persoon persoon) {
+        persoon.setAccount(account);
+        account.setPersoon(persoon);
         accounts.add(account);
     }
 
@@ -46,69 +52,65 @@ public class DataSeeder {
         VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
         PersoonManager persoonManager = PersoonManager.getInstance();
 
-        //Gebruiker initialization
-        COAAccount coaAccount = new COAAccount("coa");
-        AdminAccount adminAccount = new AdminAccount("Admin");
-        voegGebruikerToe(coaAccount);
-        voegGebruikerToe(adminAccount);
-
         //Land initialization
         Land ghana = new Land("Ghana", false);
         Land afghanistan = new Land("Afghanistan", true);
         landManager.alleLanden.add(ghana);
         landManager.alleLanden.add(afghanistan);
 
-        // Persoon initialization
-        Vluchteling joe = new Vluchteling("Joe", ghana);
-        Account gebruikersaccount1 = new Account("joe");
-        voegGebruikerToe(gebruikersaccount1);
-        joe.setAccount(gebruikersaccount1);
-        gebruikersaccount1.setPersoon(joe);
-
-        Vluchteling jane = new Vluchteling("Jane", afghanistan);
-        Account gebruikersAccount2 = new Account("jane");
-        voegGebruikerToe(gebruikersAccount2);
-        jane.setAccount(gebruikersAccount2);
-        gebruikersAccount2.setPersoon(jane);
-
         //Gemeente initialization
         Gemeente denHaag = new Gemeente("Den Haag", 562000);
         Gemeente amsterdam = new Gemeente("Amsterdam", 918000);
         Gemeente rotterdam = new Gemeente("Rotterdam", 663000);
+        Gemeente westland = new Gemeente("Westland", 108603);
         gemeenteManager.alleGemeentes.add(denHaag);
         gemeenteManager.alleGemeentes.add(amsterdam);
         gemeenteManager.alleGemeentes.add(rotterdam);
+        gemeenteManager.alleGemeentes.add(westland);
 
         //Adres initialization
         Adres adres1 = new Adres(amsterdam, "1067SL", "Willinklaan", 3);
         Adres adres2 = new Adres(denHaag, "2517AS", "Laan van Meerdervoort",108);
         Adres adres3 = new Adres(denHaag, "2492RC", "Libelsingel", 72);
+        Adres adres4 = new Adres(denHaag, "2675EK", "Prinsenland", 16);
 
         //AZC initialization
-        AZC azc1 = new AZC(adres1, 700);
-        AZC azc2 = new AZC(adres2, 600);
-        amsterdam.getLocaleAZCs().add(azc1);
-        denHaag.getLocaleAZCs().add(azc2);
-        verblijfplaatsManager.alleAZCs.add(azc1);
-        verblijfplaatsManager.alleAZCs.add(azc2);
-
-        azc1.voegVluchtelingToe(joe);
-        persoonManager.alleVluchtelingen.add(joe);
-        joe.setVerblijfplaats(azc1);
-
-        azc2.voegVluchtelingToe(jane);
-        persoonManager.alleVluchtelingen.add(jane);
-        jane.setVerblijfplaats(azc2);
+        Verblijfplaats azc1 = new AZC(adres1, 700);
+        Verblijfplaats azc2 = new AZC(adres2, 600);
+        verblijfplaatsManager.voegVerblijfplaatsToe(azc1);
+        verblijfplaatsManager.voegVerblijfplaatsToe(azc2);
 
         //Woning initialization
-        Woning woning1 = new Woning(adres3, joe);
-        verblijfplaatsManager.alleWoningen.add(woning1);
+        Verblijfplaats woning1 = new Woning(adres3);
+        Verblijfplaats woning2 = new Woning(adres4);
+        verblijfplaatsManager.voegVerblijfplaatsToe(woning1);
+        verblijfplaatsManager.voegVerblijfplaatsToe(woning2);
 
+        // Persoon initialization
+        Persoon joe = new Vluchteling("Joe", ghana);
+        persoonManager.allePersonen.add(joe);
+        azc1.zetInNieuwVerblijfplaats(joe);
+        Account gebruikersaccount1 = new Account("joe");
+        voegGebruikerToe(gebruikersaccount1, joe);
 
-    }
+        Persoon jane = new Vluchteling("Jane", afghanistan);
+        persoonManager.allePersonen.add(joe);
+        azc1.zetInNieuwVerblijfplaats(jane);
+        Account gebruikersAccount2 = new Account("jane");
+        voegGebruikerToe(gebruikersAccount2, jane);
 
-    private DataSeeder() {
-        accounts = new ArrayList<>();
-        initialize();
+        Persoon marianne = new COAMedewerker("Marianne", false);
+        persoonManager.allePersonen.add(marianne);
+        woning1.zetInNieuwVerblijfplaats(marianne);
+        Account coaAccount = new COAAccount("coa");
+        voegGebruikerToe(coaAccount, marianne);
+
+        Persoon xander = new COAMedewerker("Xander", true);
+        persoonManager.allePersonen.add(xander);
+        woning2.zetInNieuwVerblijfplaats(xander);
+        Account adminAccount = new Account("admin");
+        voegGebruikerToe(adminAccount, xander);
+
+        //adminmenu
     }
 }

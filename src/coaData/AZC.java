@@ -2,8 +2,6 @@ package coaData;
 
 import events.EventHandler;
 import events.VluchtelingEventArgs;
-import managers.PersoonManager;
-import managers.VerblijfplaatsManager;
 
 import java.util.ArrayList;
 
@@ -25,43 +23,32 @@ public class AZC extends Verblijfplaats {
         return this.gevestigdeVluchtelingen;
     }
 
-    /**
-     * Wanneer er een vluchteling wordt toegevoegd wordt het specifieke AZC - waaraan de vluchteling is toegevoegd -
-     * meegegeven als sender met desbetreffende vluchteling-object.
-     */
-    public void voegVluchtelingToe(Vluchteling vluchteling) {
-        this.gevestigdeVluchtelingen.add(vluchteling);
-        vluchtelingAdded.invoke(this, new VluchtelingEventArgs(vluchteling));
+    public AZC(Adres adres, int aantalPlaatsen) {
+        super(adres);
+        setAantalPlaatsen(aantalPlaatsen);
     }
 
     public int getBeschikbarePlaatsen() {
         return aantalPlaatsen - gevestigdeVluchtelingen.size();
     }
 
-    public AZC(Adres adres, int aantalPlaatsen) {
-        super(adres);
-        setAantalPlaatsen(aantalPlaatsen);
-    }
-
     @Override
     public void vertrekVerblijfplaats() {
-        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
-        PersoonManager persoonManager = PersoonManager.getInstance();
 
-        for (AZC azc: verblijfplaatsManager.alleAZCs) {
-            azc.gevestigdeVluchtelingen.remove(persoonManager.actiefPersoon);
-        }
     }
 
     @Override
     public void registreerWoning(){}
 
+    /**
+     * Wanneer er een vluchteling wordt toegevoegd wordt het specifieke AZC - waaraan de vluchteling is toegevoegd -
+     * meegegeven als sender met desbetreffende vluchteling-object.
+     */
     @Override
-    public void zetInNieuwVerblijfplaats() {
-        VerblijfplaatsManager verblijfplaatsManager = VerblijfplaatsManager.getInstance();
-        PersoonManager persoonManager = PersoonManager.getInstance();
-
-        persoonManager.actiefPersoon.setVerblijfplaats(verblijfplaatsManager.actiefAZC);
-        verblijfplaatsManager.actiefAZC.gevestigdeVluchtelingen.add((Vluchteling) persoonManager.actiefPersoon);
+    public void zetInNieuwVerblijfplaats(Persoon persoon) {
+        Vluchteling vluchteling = (Vluchteling) persoon;
+        persoon.setVerblijfplaats(this);
+        this.gevestigdeVluchtelingen.add(vluchteling);
+        vluchtelingAdded.invoke(this, new VluchtelingEventArgs(vluchteling));
     }
 }
